@@ -1,17 +1,28 @@
-EHBO cleanup batch 4
+EHBO cleanup batch 5
 
 Replace:
-assets/css/word-lid.css
+assets/css/fotogalerij.css
 
 What changed:
-- Removed the obsolete first generation of the vacancy-card grid and card styles.
-- Kept the newer "VACANCIES — CLEANER CARDS" implementation as the single source of truth.
-- Removed duplicated responsive vacancy rules.
-- Moved the still-active mobile meta-pill stacking rule into the final vacancy responsive block.
-- Kept vacancy header and external-vacancy styles that are still in use.
+- Consolidated the featured gallery grid into one implementation instead of several later overrides.
+- Consolidated the gallery story and final CTA styles.
+- Removed the old "FINAL GALLERY SPACING FIX" patch block.
+- Removed an unrelated Word lid selector that had accidentally ended up in fotogalerij.css.
+- Removed unused empty-state <code> styling.
+- Moved final spacing values into the selectors they actually belong to.
+- Removed unnecessary !important usage from the story lead by using a clearer selector.
+- Consolidated tablet/mobile grid placement rules.
 
-Visual verification:
-- Compared before/after rendering at desktop, tablet, and mobile widths.
-- Pixel comparison showed no visual changes at 1400, 950, 760, 560, and 400 px widths.
+Responsive fix:
+The old late override blocks were loaded after the responsive media queries, so they were silently undoing parts of the tablet/mobile layout.
+This cleanup restores the intended responsive behavior:
+- tablet story section becomes one column;
+- tablet CTA stacks vertically;
+- featured gallery becomes one column at 760px and below;
+- mobile CTA spacing rules apply correctly again.
+
+Verification:
+- Desktop computed styles are identical before/after at 1600, 1400, 1300, 1200 and 1101 px.
+- Differences at 1100px and below are intentional responsive fixes caused by removing the old cascade overrides.
 
 No PHP, JavaScript, images, or other pages are changed in this batch.
