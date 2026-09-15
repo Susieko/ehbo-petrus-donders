@@ -1,19 +1,20 @@
-EHBO cleanup batch 11
+EHBO cleanup batch 12
 
-Replace these files/folders in the theme while preserving their paths:
+Replace these files in the theme:
 - assets/css/home.css
 - assets/css/responsive.css
-- inc/assets.php
-
-Add this new stylesheet:
-- assets/css/stempelkaart-lesavonden.css
 
 What changed:
-- Moved all Stempelkaart lesavonden page styles out of global home.css.
-- Moved its responsive rules out of global responsive.css.
-- Registered the new stylesheet as a page-specific WordPress asset.
-- No intended visual changes.
+- Removed the obsolete Publicatiearchief stylesheet that was still living in home.css.
+- Removed the matching obsolete Publicatiearchief responsive rules from responsive.css.
+- The current Publicaties page already has its own page-specific implementation in publicaties.css.
+- No current homepage markup uses the removed archive selectors.
 
-Quick test:
-- Open /stempelkaart-lesavonden/ on desktop, tablet and phone widths.
-- Check hero/card, three steps, requirements block and PDF CTA.
+Verification:
+- Compared the current Publicaties archive before/after at 15 viewport widths (1400px down to 400px).
+- Computed-style differences: 0.
+
+Approximate cleanup:
+- home.css: 5330 -> 5051 lines
+- responsive.css: 1189 -> 1132 lines
+- ~336 legacy lines removed total.

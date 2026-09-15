@@ -1062,63 +1062,6 @@
 }
 
 /* ========================================
-   PUBLICATIEARCHIEF – RESPONSIVE
-======================================== */
-
-@media (max-width: 820px) {
-
-    .publication-year__grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-@media (max-width: 640px) {
-
-    .publication-archive__hero {
-        padding: 120px 0 65px;
-    }
-
-    .publication-archive__hero p {
-        font-size: 17px;
-    }
-
-    .publication-archive {
-        padding: 65px 0 90px;
-    }
-
-    .publication-archive__years {
-        margin-bottom: 55px;
-    }
-
-    .publication-year + .publication-year {
-        margin-top: 65px;
-        padding-top: 60px;
-    }
-
-    .publication-year__header {
-        flex-direction: column;
-        gap: 6px;
-    }
-
-    .publication-column__heading {
-        padding: 22px;
-    }
-
-    .publication-column__list {
-        padding: 0 22px;
-    }
-
-    .publication-entry {
-        padding: 24px 0;
-    }
-
-    .publication-archive__empty {
-        padding: 36px 24px;
-    }
-}
-
-/* ========================================
    EXTERNE ORGANISATIES – RESPONSIVE
 ======================================== */
 
