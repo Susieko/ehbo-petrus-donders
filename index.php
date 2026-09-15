@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="container">
+<main id="main-content" class="container">
     <h1>EHBO Petrus Donders</h1>
 </main>
 

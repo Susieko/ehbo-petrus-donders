@@ -139,9 +139,9 @@ function ehbo_handle_registration_form() {
         'hercertificering',
     ];
 
-$courses = ehbo_get_courses();
+    $courses = ehbo_get_courses();
 
-$allowed_courses = array_keys($courses);
+    $allowed_courses = array_keys($courses);
 
     if (
         !in_array($type, $allowed_types, true) ||
@@ -208,8 +208,8 @@ $allowed_courses = array_keys($courses);
     $type_label =
         $type_labels[$type] ?? $type;
 
-$course_label =
-    $courses[$course] ?? $course;
+    $course_label =
+        $courses[$course] ?? $course;
 
     $recipient = sanitize_email(
         get_option('admin_email')
