@@ -23,19 +23,22 @@ function ehbo_petrus_donders_assets() {
         filemtime($theme_dir . '/assets/css/header.css')
     );
 
-    wp_enqueue_style(
-        'ehbo-hero',
-        $theme_uri . '/assets/css/hero.css',
-        ['ehbo-global'],
-        filemtime($theme_dir . '/assets/css/hero.css')
-    );
+    // Homepage styles.
+    if (is_front_page()) {
+        wp_enqueue_style(
+            'ehbo-hero',
+            $theme_uri . '/assets/css/hero.css',
+            ['ehbo-global'],
+            filemtime($theme_dir . '/assets/css/hero.css')
+        );
 
-    wp_enqueue_style(
-        'ehbo-home',
-        $theme_uri . '/assets/css/home.css',
-        ['ehbo-global'],
-        filemtime($theme_dir . '/assets/css/home.css')
-    );
+        wp_enqueue_style(
+            'ehbo-home',
+            $theme_uri . '/assets/css/home.css',
+            ['ehbo-global'],
+            filemtime($theme_dir . '/assets/css/home.css')
+        );
+    }
 
     wp_enqueue_style(
         'ehbo-footer',
@@ -44,16 +47,21 @@ function ehbo_petrus_donders_assets() {
         filemtime($theme_dir . '/assets/css/footer.css')
     );
 
+    $responsive_dependencies = [
+        'ehbo-global',
+        'ehbo-header',
+        'ehbo-footer',
+    ];
+
+    if (is_front_page()) {
+        $responsive_dependencies[] = 'ehbo-hero';
+        $responsive_dependencies[] = 'ehbo-home';
+    }
+
     wp_enqueue_style(
         'ehbo-responsive',
         $theme_uri . '/assets/css/responsive.css',
-        [
-            'ehbo-global',
-            'ehbo-header',
-            'ehbo-hero',
-            'ehbo-home',
-            'ehbo-footer',
-        ],
+        $responsive_dependencies,
         filemtime($theme_dir . '/assets/css/responsive.css')
     );
 
