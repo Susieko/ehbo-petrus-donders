@@ -421,6 +421,10 @@
     color: #7c5b00;
 }
 
+.publication-feature__content .section-eyebrow {
+    margin-bottom: 15px;
+}
+
 .publication-feature__content h2 {
     margin:
         0
@@ -544,8 +548,8 @@
 .publication-archive__intro > p {
     margin:
         0
-        22px
-        0;
+        0
+        22px;
 
     color: var(--color-text-soft);
 
@@ -915,14 +919,14 @@
 .publication-card__content h4 {
     margin:
         0
-        13px
-        0;
+        0
+        13px;
 
     color: var(--color-blue-dark);
 
     font-size: 22px;
 
-    line-height: 1.2;
+    line-height: 1.25;
 
     letter-spacing: -0.03em;
 }
@@ -930,13 +934,13 @@
 .publication-card__content p {
     margin:
         0
-        24px
-        0;
+        0
+        24px;
 
     color: var(--color-text-soft);
 
     font-size: 13px;
-    line-height: 1.7;
+    line-height: 1.75;
 }
 
 .publication-card__link {
@@ -1051,6 +1055,9 @@
 }
 
 .publication-about__inner > div {
+    display: flex;
+    flex-direction: column;
+
     max-width: 530px;
 }
 
@@ -1063,23 +1070,29 @@
         var(--color-border);
 }
 
+.publication-about .section-eyebrow {
+    margin-bottom: 15px;
+}
+
 .publication-about h3 {
     margin:
         0
-        13px
-        0;
+        0
+        15px;
 
     color: var(--color-blue-dark);
 
     font-size:
         clamp(26px, 2.8vw, 36px);
 
-    line-height: 1.12;
+    line-height: 1.15;
 
     letter-spacing: -0.035em;
 }
 
 .publication-about p {
+    max-width: 510px;
+
     margin: 0;
 
     color: var(--color-text-soft);
@@ -1133,7 +1146,7 @@
 .publications-next__card > div > span {
     display: block;
 
-    margin-bottom: 8px;
+    margin-bottom: 14px;
 
     color: var(--color-red);
 
@@ -1147,15 +1160,15 @@
 .publications-next h2 {
     margin:
         0
-        15px
-        0;
+        0
+        17px;
 
     color: var(--color-blue-dark);
 
     font-size:
         clamp(34px, 3.8vw, 49px);
 
-    line-height: 1.08;
+    line-height: 1.1;
 
     letter-spacing: -0.04em;
 }
@@ -1168,7 +1181,7 @@
     color: var(--color-text-soft);
 
     font-size: 15px;
-    line-height: 1.7;
+    line-height: 1.75;
 }
 
 .publications-next .page-button {
@@ -1257,6 +1270,10 @@
 
 
 @media (max-width: 760px) {
+
+    .publication-about__inner {
+        gap: 40px;
+    }
 
     /* Hero
     ------------------------------------ */
@@ -1357,125 +1374,6 @@
         padding:
             35px
             27px;
-    }
-
-}
-
-/* ========================================
-   PUBLICATIES — FINAL TEXT SPACING FIX
-======================================== */
-
-
-/* Archive intro
----------------------------------------- */
-
-.publication-archive__intro > p {
-    margin:
-        0
-        0
-        22px;
-
-    line-height: 1.75;
-}
-
-
-/* Publication cards
----------------------------------------- */
-
-.publication-card__content h4 {
-    margin:
-        0
-        0
-        13px;
-
-    line-height: 1.25;
-}
-
-.publication-card__content p {
-    margin:
-        0
-        0
-        24px;
-
-    line-height: 1.75;
-}
-
-
-/* Newsletter / Dondersteentje explanation
----------------------------------------- */
-
-.publication-about__inner > div {
-    display: flex;
-    flex-direction: column;
-}
-
-.publication-about .section-eyebrow {
-    margin-bottom: 15px;
-}
-
-.publication-about h3 {
-    margin:
-        0
-        0
-        15px;
-
-    line-height: 1.15;
-}
-
-.publication-about p {
-    margin: 0;
-
-    max-width: 510px;
-
-    line-height: 1.75;
-}
-
-
-/* Closing CTA
----------------------------------------- */
-
-.publications-next__card > div > span {
-    margin-bottom: 14px;
-}
-
-.publications-next h2 {
-    margin:
-        0
-        0
-        17px;
-
-    line-height: 1.1;
-}
-
-.publications-next p {
-    margin: 0;
-
-    line-height: 1.75;
-}
-
-
-/* Featured publication
----------------------------------------- */
-
-.publication-feature__content .section-eyebrow {
-    margin-bottom: 15px;
-}
-
-.publication-feature__content h2 {
-    margin:
-        0
-        0
-        24px;
-}
-
-
-/* Mobile
----------------------------------------- */
-
-@media (max-width: 760px) {
-
-    .publication-about__inner {
-        gap: 40px;
     }
 
 }
