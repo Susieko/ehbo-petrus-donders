@@ -1,4 +1,34 @@
 /* ========================================
+   GLOBAL SECTION EYEBROW
+======================================== */
+
+
+.section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 12px;
+
+    color: var(--color-blue);
+
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.section-eyebrow::before {
+    content: "";
+
+    width: 28px;
+    height: 3px;
+
+    background: var(--color-red);
+
+    border-radius: 100px;
+}
+
+/* ========================================
    OVER ONZE VERENIGING
 ======================================== */
 
@@ -1179,6 +1209,53 @@
     border-radius: 30px;
 
     overflow: hidden;
+}
+
+
+/* Temporary visual until we use a photo
+======================================== */
+
+.event-support__image-placeholder {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 40px;
+
+    color: var(--color-blue);
+
+    text-align: center;
+}
+
+.event-support__image-placeholder svg {
+    width: 110px;
+    height: 110px;
+
+    stroke-width: 1.3;
+}
+
+.event-support__image-placeholder span {
+    max-width: 320px;
+
+    color: var(--color-blue-dark);
+
+    font-size:
+        clamp(24px, 2.4vw, 34px);
+
+    font-weight: 850;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.025em;
 }
 
 
@@ -3441,382 +3518,282 @@
 }
 
 /* ========================================
-   STEMPELKAART
+   PUBLICATIEARCHIEF
 ======================================== */
 
-.stamp-card-hero {
-    padding: 150px 0 100px;
-
-    color: var(--color-white);
-    background:
-        radial-gradient(
-            circle at 83% 28%,
-            rgba(255, 210, 0, 0.17),
-            transparent 29%
-        ),
-        var(--color-blue-dark);
-}
-
-.stamp-card-hero__inner {
-    display: grid;
-    grid-template-columns:
-        minmax(0, 1.05fr)
-        minmax(340px, 0.7fr);
-    align-items: center;
-    gap: 90px;
-}
-
-.stamp-card-hero__content h1 {
-    max-width: 800px;
-    margin: 0 0 24px;
-
-    font-size: clamp(48px, 6vw, 78px);
-    line-height: 1.03;
-    letter-spacing: -0.045em;
-}
-
-.stamp-card-hero__content > p {
-    max-width: 670px;
-    margin: 0 0 34px;
-
-    color: rgba(255, 255, 255, 0.82);
-
-    font-size: 19px;
-    line-height: 1.75;
-}
-
-.stamp-card-hero__button {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-
-    padding: 15px 22px;
-
-    color: var(--color-blue-dark);
-    background: var(--color-yellow);
-
-    border-radius: 100px;
-
-    font-weight: 850;
-    text-decoration: none;
-
-    transition:
-        transform 200ms ease,
-        background 200ms ease;
-}
-
-.stamp-card-hero__button:hover {
-    transform: translateY(-3px);
-}
-
-.stamp-card-hero__button:focus-visible {
-    outline: 4px solid var(--color-white);
-    outline-offset: 4px;
-}
-
-
-/* Illustrated card
-======================================== */
-
-.stamp-card-hero__visual {
-    transform: rotate(3deg);
-}
-
-.stamp-card {
-    padding: 34px;
-
-    color: var(--color-blue-dark);
-    background: var(--color-white);
-
-    border: 8px solid rgba(255, 255, 255, 0.15);
-    border-radius: 24px;
-
-    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.28);
-}
-
-.stamp-card__heading {
-    display: flex;
-    flex-direction: column;
-
-    margin-bottom: 25px;
-    padding-bottom: 20px;
-
-    border-bottom: 3px solid var(--color-red);
-}
-
-.stamp-card__heading span {
-    color: var(--color-text-soft);
-
-    font-size: 13px;
-    font-weight: 750;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
-.stamp-card__heading strong {
-    font-size: 27px;
-}
-
-.stamp-card__years {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-
-    margin-bottom: 16px;
-}
-
-.stamp-card__years span {
-    padding: 8px;
-
-    text-align: center;
-    background: var(--color-off-white);
-
-    border-radius: 8px;
-
-    font-size: 12px;
-    font-weight: 800;
-}
-
-.stamp-card__stamps {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 11px;
-
-    margin-bottom: 25px;
-}
-
-.stamp-card__stamps span {
-    display: grid;
-    place-items: center;
-
-    aspect-ratio: 1;
-
-    color: var(--color-white);
-    background: var(--color-off-white);
-
-    border: 2px dashed rgba(7, 48, 96, 0.22);
-    border-radius: 50%;
-
-    font-size: 20px;
-    font-weight: 900;
-}
-
-.stamp-card__stamps .is-stamped {
-    background: var(--color-red);
-    border-color: var(--color-red);
-}
-
-.stamp-card small {
-    color: var(--color-text-soft);
-    font-weight: 750;
-}
-
-
-/* Explanation and steps
-======================================== */
-
-.stamp-card-explanation {
-    padding: 110px 0;
-
-    background: var(--color-white);
-}
-
-.stamp-card-explanation__header {
-    max-width: 760px;
-    margin-bottom: 48px;
-}
-
-.stamp-card-explanation__header h2,
-.stamp-card-requirements__content h2,
-.stamp-card-download h2 {
-    margin: 0 0 18px;
-
-    color: var(--color-blue-dark);
-
-    font-size: clamp(38px, 4vw, 58px);
-    line-height: 1.08;
-    letter-spacing: -0.04em;
-}
-
-.stamp-card-explanation__header p,
-.stamp-card-requirements__content > p,
-.stamp-card-download p {
-    margin: 0;
-
-    color: var(--color-text-soft);
-
-    font-size: 17px;
-    line-height: 1.75;
-}
-
-.stamp-card-steps {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 22px;
-}
-
-.stamp-card-step {
-    padding: 32px;
-
-    background: var(--color-off-white);
-
-    border: 1px solid rgba(7, 48, 96, 0.1);
-    border-radius: 20px;
-}
-
-.stamp-card-step__number {
-    display: block;
-
-    margin-bottom: 42px;
-
-    color: var(--color-red);
-
-    font-size: 14px;
-    font-weight: 900;
-}
-
-.stamp-card-step h3 {
-    margin: 0 0 13px;
-
-    color: var(--color-blue-dark);
-
-    font-size: 23px;
-}
-
-.stamp-card-step p {
-    margin: 0;
-
-    color: var(--color-text-soft);
-
-    line-height: 1.7;
-}
-
-
-/* Requirements
-======================================== */
-
-.stamp-card-requirements {
-    padding: 110px 0;
-
-    background: var(--color-off-white);
-}
-
-.stamp-card-requirements__grid {
-    display: grid;
-    grid-template-columns:
-        minmax(0, 1fr)
-        minmax(320px, 0.7fr);
-    align-items: center;
-    gap: 90px;
-}
-
-.stamp-card-checklist {
-    display: grid;
-    gap: 13px;
-
-    margin: 30px 0 0;
-    padding: 0;
-
-    list-style: none;
-}
-
-.stamp-card-checklist li {
-    display: flex;
-    align-items: center;
-    gap: 13px;
-
-    color: var(--color-blue-dark);
-
-    font-weight: 800;
-}
-
-.stamp-card-checklist li span {
-    display: grid;
-    flex: 0 0 auto;
-    place-items: center;
-
-    width: 30px;
-    height: 30px;
-
-    color: var(--color-white);
-    background: var(--color-red);
-
-    border-radius: 50%;
-}
-
-.stamp-card-requirements__notice {
-    padding: 38px;
+.publication-archive__hero {
+    padding: 150px 0 80px;
 
     color: var(--color-white);
     background: var(--color-blue-dark);
+}
 
+.publication-archive__hero h1 {
+    max-width: 850px;
+    margin: 0 0 22px;
+
+    font-size: clamp(46px, 6vw, 76px);
+    line-height: 1.04;
+    letter-spacing: -0.045em;
+}
+
+.publication-archive__hero p {
+    max-width: 680px;
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.8);
+
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+.publication-archive {
+    padding: 90px 0 120px;
+
+    background: var(--color-off-white);
+}
+
+
+/* Year navigation
+======================================== */
+
+.publication-archive__years {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-bottom: 70px;
+    padding-bottom: 28px;
+
+    border-bottom: 1px solid rgba(7, 48, 96, 0.13);
+}
+
+.publication-archive__years span {
+    margin-right: 6px;
+
+    color: var(--color-text-soft);
+
+    font-size: 14px;
+    font-weight: 750;
+}
+
+.publication-archive__years a {
+    padding: 9px 16px;
+
+    color: var(--color-blue-dark);
+    background: var(--color-white);
+
+    border: 1px solid rgba(7, 48, 96, 0.14);
+    border-radius: 100px;
+
+    font-weight: 800;
+    text-decoration: none;
+
+    transition:
+        color 200ms ease,
+        background 200ms ease,
+        transform 200ms ease;
+}
+
+.publication-archive__years a:hover {
+    color: var(--color-white);
+    background: var(--color-blue-dark);
+
+    transform: translateY(-2px);
+}
+
+
+/* Year section
+======================================== */
+
+.publication-year {
+    scroll-margin-top: 120px;
+}
+
+.publication-year + .publication-year {
+    margin-top: 90px;
+    padding-top: 80px;
+
+    border-top: 1px solid rgba(7, 48, 96, 0.13);
+}
+
+.publication-year__header {
+    display: flex;
+    align-items: baseline;
+    gap: 13px;
+
+    margin-bottom: 32px;
+}
+
+.publication-year__header span {
+    color: var(--color-text-soft);
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.publication-year__header h2 {
+    margin: 0;
+
+    color: var(--color-blue-dark);
+
+    font-size: clamp(42px, 5vw, 64px);
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.publication-year__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 24px;
+}
+
+
+/* Publication columns
+======================================== */
+
+.publication-column {
+    overflow: hidden;
+
+    background: var(--color-white);
+
+    border: 1px solid rgba(7, 48, 96, 0.1);
     border-radius: 22px;
 
     box-shadow: var(--shadow-soft);
 }
 
-.stamp-card-requirements__icon {
+.publication-column__heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 26px 30px;
+
+    background: var(--color-blue-dark);
+    color: var(--color-white);
+}
+
+.publication-column--dondersteentje
+.publication-column__heading {
+    background: var(--color-red);
+}
+
+.publication-column__icon {
     display: grid;
     place-items: center;
 
-    width: 46px;
-    height: 46px;
-    margin-bottom: 25px;
+    width: 42px;
+    height: 42px;
 
-    color: var(--color-blue-dark);
-    background: var(--color-yellow);
+    background: rgba(255, 255, 255, 0.15);
 
-    border-radius: 50%;
-
-    font-size: 22px;
-    font-weight: 900;
+    border-radius: 12px;
 }
 
-.stamp-card-requirements__notice h3 {
-    margin: 0 0 16px;
+.publication-column__icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.publication-column__heading h3 {
+    margin: 0;
 
     color: inherit;
 
-    font-size: 25px;
+    font-size: 22px;
+    line-height: 1.25;
 }
 
-.stamp-card-requirements__notice p {
-    margin: 0;
+.publication-column__list {
+    padding: 0 30px;
+}
 
-    color: rgba(255, 255, 255, 0.78);
 
+/* Individual publication
+======================================== */
+
+.publication-entry {
+    padding: 28px 0;
+}
+
+.publication-entry + .publication-entry {
+    border-top: 1px solid rgba(7, 48, 96, 0.1);
+}
+
+.publication-entry time {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--color-text-soft);
+
+    font-size: 13px;
+    font-weight: 750;
+}
+
+.publication-entry h4 {
+    margin: 0 0 12px;
+
+    color: var(--color-blue-dark);
+
+    font-size: 21px;
+    line-height: 1.3;
+}
+
+.publication-entry p {
+    margin: 0 0 20px;
+
+    color: var(--color-text-soft);
+
+    font-size: 15px;
     line-height: 1.7;
 }
 
-.stamp-card-requirements__notice p + p {
-    margin-top: 17px;
-}
-
-
-/* Download
-======================================== */
-
-.stamp-card-download {
-    padding: 90px 0;
-
-    background: var(--color-white);
-}
-
-.stamp-card-download__inner {
-    display: flex;
+.publication-entry a {
+    display: inline-flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 60px;
+    gap: 8px;
 
-    padding: 48px;
+    color: var(--color-blue-dark);
 
-    background: var(--color-blue-light);
-
-    border-radius: 24px;
+    font-size: 14px;
+    font-weight: 850;
+    text-decoration: none;
 }
 
-.stamp-card-download__inner > div {
-    max-width: 700px;
+.publication-column--dondersteentje
+.publication-entry a {
+    color: var(--color-red);
+}
+
+.publication-entry a:hover {
+    text-decoration: underline;
+}
+
+.publication-entry__unavailable,
+.publication-column__empty {
+    color: var(--color-text-soft);
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.publication-column__empty {
+    margin: 0;
+    padding: 30px;
+    line-height: 1.6;
+}
+
+.publication-archive__empty {
+    padding: 55px;
+
+    text-align: center;
+    background: var(--color-white);
+
+    border-radius: 22px;
 }
 
 /* ========================================

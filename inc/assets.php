@@ -98,6 +98,10 @@ function ehbo_petrus_donders_assets() {
             'handle' => 'ehbo-contact-page',
             'file'   => 'contact-page.css',
         ],
+        'stempelkaart-lesavonden' => [
+            'handle' => 'ehbo-stempelkaart-lesavonden',
+            'file'   => 'stempelkaart-lesavonden.css',
+        ],
     ];
 
     foreach ($page_styles as $page => $style) {
