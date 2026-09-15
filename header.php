@@ -53,7 +53,7 @@
                 <img
                     src="<?php echo esc_url(
                         get_template_directory_uri() .
-                        '/assets/images/logo-petrus-donders.png'
+                        '/assets/images/logo-petrus-donders2.png'
                     ); ?>"
                     alt="EHBO Petrus Donders Tilburg"
                 >

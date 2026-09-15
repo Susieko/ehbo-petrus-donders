@@ -60,7 +60,7 @@
 /* Slightly smaller when scrolling */
 .site-header.is-scrolled .site-header__inner {
     min-height: 122px;
-    padding-top: 30px;
+    padding-top: 0px;
     padding-bottom: 0px;
 }
 
