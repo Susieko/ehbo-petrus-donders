@@ -429,19 +429,6 @@
         border-radius: 20px;
     }
 
-    .event-support__image-placeholder {
-        padding: 30px;
-    }
-
-    .event-support__image-placeholder svg {
-        width: 80px;
-        height: 80px;
-    }
-
-    .event-support__image-placeholder span {
-        font-size: 26px;
-    }
-
     .event-support__badge {
         right: 0;
 
@@ -779,22 +766,6 @@
 
 
 @media (max-width: 640px) {
-
-    .footer-heartbeat {
-        gap: 10px;
-
-        padding:
-            26px
-            20px;
-    }
-
-    .footer-heartbeat__line {
-        width: 50px;
-    }
-
-    .footer-heartbeat__icon {
-        width: 140px;
-    }
 
 
     .site-footer {

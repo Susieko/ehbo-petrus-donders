@@ -1126,53 +1126,6 @@
 }
 
 
-/* Temporary visual until we use a photo
-======================================== */
-
-.event-support__image-placeholder {
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 20px;
-
-    width: 100%;
-    height: 100%;
-
-    padding: 40px;
-
-    color: var(--color-blue);
-
-    text-align: center;
-}
-
-.event-support__image-placeholder svg {
-    width: 110px;
-    height: 110px;
-
-    stroke-width: 1.3;
-}
-
-.event-support__image-placeholder span {
-    max-width: 320px;
-
-    color: var(--color-blue-dark);
-
-    font-size:
-        clamp(24px, 2.4vw, 34px);
-
-    font-weight: 850;
-
-    line-height: 1.2;
-
-    letter-spacing: -0.025em;
-}
-
-
 /* ========================================
    YELLOW BADGE
 ======================================== */
