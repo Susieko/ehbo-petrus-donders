@@ -139,15 +139,9 @@ function ehbo_handle_registration_form() {
         'hercertificering',
     ];
 
-    $allowed_courses = [
-        'diploma-eerste-hulp',
-        'ehak',
-        'reanimatie-aed',
-        'stop-de-bloeding',
-        'wandelletsels',
-        'sportletsels',
-        'in-company',
-    ];
+$courses = ehbo_get_courses();
+
+$allowed_courses = array_keys($courses);
 
     if (
         !in_array($type, $allowed_types, true) ||
@@ -211,34 +205,11 @@ function ehbo_handle_registration_form() {
         'hercertificering' => 'Hercertificering',
     ];
 
-    $course_labels = [
-        'diploma-eerste-hulp' =>
-            'Diploma Eerste Hulp',
-
-        'ehak' =>
-            'Eerste Hulp aan Kinderen',
-
-        'reanimatie-aed' =>
-            'Reanimatie & AED',
-
-        'stop-de-bloeding' =>
-            'Stop de bloeding',
-
-        'wandelletsels' =>
-            'Wandelletsels',
-
-        'sportletsels' =>
-            'Sportletsels',
-
-        'in-company' =>
-            'Workshop / In Company',
-    ];
-
     $type_label =
         $type_labels[$type] ?? $type;
 
-    $course_label =
-        $course_labels[$course] ?? $course;
+$course_label =
+    $courses[$course] ?? $course;
 
     $recipient = sanitize_email(
         get_option('admin_email')

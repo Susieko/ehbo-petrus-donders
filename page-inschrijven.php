@@ -498,85 +498,28 @@ $form_status = isset($_GET['inschrijving_status'])
                             </label>
 
                             <select
-                                id="registration-course"
-                                name="registration_course"
-                            >
+    id="registration-course"
+    name="registration_course"
+>
+    <option value="">
+        Kies een opleiding
+    </option>
 
-                                <option value="">
-                                    Kies een opleiding
-                                </option>
+    <?php foreach (ehbo_get_courses() as $slug => $label) : ?>
 
-                                <option
-                                    value="diploma-eerste-hulp"
-                                    <?php selected(
-                                        $selected_course,
-                                        'diploma-eerste-hulp'
-                                    ); ?>
-                                >
-                                    Diploma Eerste Hulp
-                                </option>
+        <option
+            value="<?php echo esc_attr($slug); ?>"
+            <?php selected(
+                $selected_course,
+                $slug
+            ); ?>
+        >
+            <?php echo esc_html($label); ?>
+        </option>
 
-                                <option
-                                    value="ehak"
-                                    <?php selected(
-                                        $selected_course,
-                                        'ehak'
-                                    ); ?>
-                                >
-                                    Eerste Hulp aan Kinderen
-                                </option>
+    <?php endforeach; ?>
 
-                                <option
-                                    value="reanimatie-aed"
-                                    <?php selected(
-                                        $selected_course,
-                                        'reanimatie-aed'
-                                    ); ?>
-                                >
-                                    Reanimatie & AED
-                                </option>
-
-                                <option
-                                    value="stop-de-bloeding"
-                                    <?php selected(
-                                        $selected_course,
-                                        'stop-de-bloeding'
-                                    ); ?>
-                                >
-                                    Stop de bloeding
-                                </option>
-
-                                <option
-                                    value="wandelletsels"
-                                    <?php selected(
-                                        $selected_course,
-                                        'wandelletsels'
-                                    ); ?>
-                                >
-                                    Wandelletsels
-                                </option>
-
-                                <option
-                                    value="sportletsels"
-                                    <?php selected(
-                                        $selected_course,
-                                        'sportletsels'
-                                    ); ?>
-                                >
-                                    Sportletsels
-                                </option>
-
-                                <option
-                                    value="in-company"
-                                    <?php selected(
-                                        $selected_course,
-                                        'in-company'
-                                    ); ?>
-                                >
-                                    Workshop / In Company
-                                </option>
-
-                            </select>
+</select>
 
                         </div>
 
