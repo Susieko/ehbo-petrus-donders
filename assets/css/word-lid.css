@@ -925,191 +925,6 @@
 }
 
 
-/* ========================================
-   OPEN APPLICATION
-======================================== */
-
-.join-open {
-    background: var(--color-white);
-}
-
-.join-open__inner {
-    display: grid;
-
-    grid-template-columns:
-        minmax(300px, 0.8fr)
-        minmax(0, 1fr);
-
-    align-items: center;
-
-    gap:
-        clamp(65px, 9vw, 135px);
-}
-
-.join-open h2 {
-    margin: 0;
-
-    color: var(--color-blue-dark);
-
-    font-size:
-        clamp(42px, 4.5vw, 62px);
-
-    line-height: 1.04;
-
-    letter-spacing: -0.045em;
-}
-
-.join-open__inner > div:last-child {
-    max-width: 620px;
-}
-
-.join-open__inner > div:last-child > p {
-    margin:
-        0
-        30px
-        0;
-
-    color: var(--color-text-soft);
-
-    font-size: 17px;
-    line-height: 1.8;
-}
-
-
-/* ========================================
-   FINAL CTA
-======================================== */
-
-.join-next {
-    padding:
-        clamp(70px, 8vw, 105px)
-        0;
-
-    background: var(--color-white);
-}
-
-.join-next__card {
-    position: relative;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 60px;
-
-    padding:
-        clamp(45px, 6vw, 70px);
-
-    background: var(--color-blue-dark);
-    color: var(--color-white);
-
-    border-radius:
-        25px
-        25px
-        8px
-        25px;
-
-    box-shadow:
-        0 23px 70px
-        rgba(8, 47, 99, 0.15);
-
-    overflow: hidden;
-}
-
-.join-next__card::before {
-    content: "";
-
-    position: absolute;
-
-    top: -230px;
-    right: -180px;
-
-    width: 500px;
-    height: 500px;
-
-    border:
-        1px solid
-        rgba(255, 255, 255, 0.07);
-
-    border-radius: 50%;
-}
-
-.join-next__card::after {
-    content: "+";
-
-    position: absolute;
-
-    right: 3%;
-    bottom: -105px;
-
-    color:
-        rgba(255, 255, 255, 0.03);
-
-    font-size: 260px;
-    font-weight: 300;
-
-    line-height: 1;
-
-    pointer-events: none;
-}
-
-.join-next__card > div,
-.join-next__card > a {
-    position: relative;
-
-    z-index: 2;
-}
-
-.join-next__card > div {
-    max-width: 700px;
-}
-
-.join-next__card > div > span {
-    display: block;
-
-    margin-bottom: 11px;
-
-    color: var(--color-yellow);
-
-    font-size: 10px;
-    font-weight: 850;
-
-    text-transform: uppercase;
-    letter-spacing: 0.09em;
-}
-
-.join-next h2 {
-    margin:
-        0
-        0
-        17px;
-
-    color: var(--color-white);
-
-    font-size:
-        clamp(39px, 4.3vw, 58px);
-
-    line-height: 1.04;
-
-    letter-spacing: -0.045em;
-}
-
-.join-next p {
-    max-width: 590px;
-
-    margin: 0;
-
-    color:
-        rgba(255, 255, 255, 0.70);
-
-    font-size: 15px;
-    line-height: 1.75;
-}
-
-.join-next .page-button {
-    flex-shrink: 0;
-}
 
 
 /* ========================================
@@ -1322,78 +1137,11 @@
 
 }
 
-/* ========================================
-   OPEN APPLICATION
-======================================== */
-
-.join-open {
-    padding:
-        clamp(75px, 8vw, 105px)
-        0
-        clamp(55px, 6vw, 75px);
-
-    background: var(--color-blue-light);
-}
-
-.join-open__inner {
-    display: grid;
-
-    grid-template-columns:
-        minmax(300px, 0.8fr)
-        minmax(0, 0.85fr);
-
-    align-items: center;
-
-    gap:
-        clamp(60px, 9vw, 125px);
-}
-
-.join-open__inner > div:first-child {
-    max-width: 620px;
-}
-
-.join-open h2 {
-    margin: 0;
-
-    color: var(--color-blue-dark);
-
-    font-size:
-        clamp(42px, 4.5vw, 60px);
-
-    line-height: 1.04;
-
-    letter-spacing: -0.045em;
-}
-
-.join-open__inner > div:last-child {
-    max-width: 590px;
-}
-
-.join-open__inner > div:last-child > p {
-    margin:
-        0
-        0
-        26px;
-
-    color: var(--color-text-soft);
-
-    font-size: 16px;
-    line-height: 1.8;
-}
-
 
 /* ========================================
    FINAL CTA
 ======================================== */
 
-.join-next {
-    padding:
-        0
-        0
-        clamp(75px, 8vw, 105px);
-
-    background: var(--color-blue-light);
-}
 
 .join-next__card {
     position: relative;
@@ -1405,6 +1153,7 @@
         auto;
 
     align-items: center;
+    justify-content: space-between;
 
     gap:
         clamp(50px, 8vw, 100px);
@@ -1942,15 +1691,6 @@
 
 @media (max-width: 700px) {
 
-    /* Fotogalerij — Waarom een galerij? */
-    .gallery-story__inner {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-
-    .gallery-story__inner h2 {
-        max-width: none;
-    }
 
 
     /* Word lid — Geen passende vacature? */
