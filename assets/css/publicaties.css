@@ -637,13 +637,30 @@
 
 .publication-archive__years {
     display: grid;
+    align-items: center;
 
     gap:
         clamp(75px, 9vw, 110px);
+
+    margin-bottom: 70px;
+    padding-bottom: 28px;
+
+    border-bottom:
+        1px solid
+        rgba(7, 48, 96, 0.13);
 }
 
 .publication-year {
     scroll-margin-top: 140px;
+}
+
+.publication-year + .publication-year {
+    margin-top: 90px;
+    padding-top: 80px;
+
+    border-top:
+        1px solid
+        rgba(7, 48, 96, 0.13);
 }
 
 .publication-year__heading {
@@ -1327,6 +1344,20 @@
 
     .publication-card__visual {
         height: 460px;
+    }
+
+}
+
+
+@media (max-width: 640px) {
+
+    .publication-archive__years {
+        margin-bottom: 55px;
+    }
+
+    .publication-year + .publication-year {
+        margin-top: 65px;
+        padding-top: 60px;
     }
 
 }
