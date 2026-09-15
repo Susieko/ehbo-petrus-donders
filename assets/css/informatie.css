@@ -1447,315 +1447,6 @@
 
 
 /* ========================================
-   DOCUMENTS
-======================================== */
-
-.information-documents {
-    background: var(--color-white);
-}
-
-.information-documents__inner {
-    display: grid;
-
-    grid-template-columns:
-        minmax(280px, 0.65fr)
-        minmax(0, 1fr);
-
-    align-items: start;
-
-    gap:
-        clamp(60px, 9vw, 135px);
-}
-
-.information-documents__inner > div:first-child {
-    max-width: 520px;
-}
-
-.information-documents h2 {
-    margin:
-        0
-        18px
-        0;
-
-    color: var(--color-blue-dark);
-
-    font-size:
-        clamp(42px, 4.4vw, 60px);
-
-    line-height: 1.04;
-
-    letter-spacing: -0.045em;
-}
-
-.information-documents__inner > div:first-child > p {
-    margin: 0;
-
-    color: var(--color-text-soft);
-
-    font-size: 16px;
-    line-height: 1.75;
-}
-
-
-/* Document links
----------------------------------------- */
-
-.information-documents__links {
-    display: grid;
-
-    border-top:
-        1px solid
-        var(--color-border);
-}
-
-.information-documents__links > a {
-    display: grid;
-
-    grid-template-columns:
-        48px
-        minmax(0, 1fr)
-        auto;
-
-    align-items: center;
-
-    gap: 20px;
-
-    min-height: 92px;
-
-    padding:
-        15px
-        5px;
-
-    color: inherit;
-
-    border-bottom:
-        1px solid
-        var(--color-border);
-
-    transition:
-        padding-left var(--transition);
-}
-
-.information-documents__links > a:hover {
-    padding-left: 10px;
-}
-
-.information-documents__links > a > span {
-    display: grid;
-
-    place-items: center;
-
-    width: 43px;
-    height: 43px;
-
-    background: var(--color-blue-light);
-    color: var(--color-blue);
-
-    border-radius: 11px;
-
-    font-size: 9px;
-    font-weight: 900;
-
-    letter-spacing: 0.07em;
-}
-
-.information-documents__links strong,
-.information-documents__links small {
-    display: block;
-}
-
-.information-documents__links strong {
-    margin-bottom: 3px;
-
-    color: var(--color-blue-dark);
-
-    font-size: 15px;
-}
-
-.information-documents__links small {
-    color: var(--color-text-soft);
-
-    font-size: 12px;
-}
-
-.information-documents__links b {
-    color: var(--color-blue);
-
-    font-size: 16px;
-}
-
-
-/* ========================================
-   MEMBERSHIP
-======================================== */
-
-.information-membership {
-    padding:
-        clamp(40px, 5vw, 65px)
-        0
-        0;
-
-    background: var(--color-white);
-}
-
-.information-membership__card {
-    position: relative;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 60px;
-
-    padding:
-        clamp(38px, 5vw, 62px);
-
-    background: var(--color-blue-light);
-
-    border-radius:
-        24px
-        24px
-        7px
-        24px;
-
-    overflow: hidden;
-}
-
-.information-membership__card::after {
-    content: "+";
-
-    position: absolute;
-
-    right: 4%;
-    bottom: -90px;
-
-    color:
-        rgba(7, 90, 184, 0.04);
-
-    font-size: 240px;
-    font-weight: 300;
-
-    line-height: 1;
-
-    pointer-events: none;
-}
-
-.information-membership__card > div,
-.information-membership__card > a {
-    position: relative;
-
-    z-index: 2;
-}
-
-.information-membership__card > div {
-    max-width: 650px;
-}
-
-.information-membership__card > div > span {
-    display: block;
-
-    margin-bottom: 8px;
-
-    color: var(--color-red);
-
-    font-size: 11px;
-    font-weight: 850;
-
-    text-transform: uppercase;
-    letter-spacing: 0.09em;
-}
-
-.information-membership h2 {
-    margin:
-        0
-        14px
-        0;
-
-    color: var(--color-blue-dark);
-
-    font-size:
-        clamp(34px, 3.8vw, 50px);
-
-    line-height: 1.07;
-
-    letter-spacing: -0.04em;
-}
-
-.information-membership p {
-    margin: 0;
-
-    color: var(--color-text-soft);
-
-    font-size: 15px;
-    line-height: 1.7;
-}
-
-.information-membership .page-button {
-    flex-shrink: 0;
-}
-
-
-/* ========================================
-   FINAL CTA
-======================================== */
-
-.information-next {
-    padding:
-        65px
-        0;
-
-    background: var(--color-white);
-}
-
-.information-next__inner {
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 50px;
-
-    padding-top: 50px;
-
-    border-top:
-        1px solid
-        var(--color-border);
-}
-
-.information-next__inner > div > span {
-    display: block;
-
-    margin-bottom: 7px;
-
-    color: var(--color-red);
-
-    font-size: 11px;
-    font-weight: 850;
-
-    text-transform: uppercase;
-    letter-spacing: 0.09em;
-}
-
-.information-next h2 {
-    margin: 0;
-
-    color: var(--color-blue-dark);
-
-    font-size:
-        clamp(31px, 3.3vw, 45px);
-
-    line-height: 1.1;
-
-    letter-spacing: -0.04em;
-}
-
-.information-next .page-button {
-    flex-shrink: 0;
-}
-
-
-/* ========================================
    ANCHOR OFFSETS
 ======================================== */
 
@@ -1794,8 +1485,7 @@
     .information-locations__header,
     .information-prices__header,
     .information-safety__header,
-    .information-lessons__inner,
-    .information-documents__inner {
+    .information-lessons__inner {
         grid-template-columns: 1fr;
     }
 
@@ -1806,8 +1496,7 @@
         gap: 28px;
     }
 
-    .information-lessons__inner,
-    .information-documents__inner {
+    .information-lessons__inner {
         gap: 55px;
     }
 
@@ -1815,12 +1504,6 @@
         max-width: 620px;
     }
 
-    .information-membership__card,
-    .information-next__inner {
-        align-items: flex-start;
-
-        flex-direction: column;
-    }
 
 }
 
@@ -1981,12 +1664,6 @@
     }
 
 
-    /* Membership
-    ------------------------------------ */
-
-    .information-membership__card {
-        gap: 30px;
-    }
 
 }
 
@@ -2054,28 +1731,6 @@
     }
 
 
-    .information-documents__links > a {
-        grid-template-columns:
-            44px
-            minmax(0, 1fr)
-            auto;
-
-        gap: 14px;
-    }
-
-
-    .information-membership__card {
-        padding:
-            34px
-            26px;
-    }
-
-
-    .information-next {
-        padding:
-            50px
-            0;
-    }
 
 }
 
