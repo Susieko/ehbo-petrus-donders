@@ -1,0 +1,1158 @@
+/* ========================================
+   EHBO PETRUS DONDERS
+   Inschrijven
+======================================== */
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.registration-hero {
+    overflow: hidden;
+}
+
+
+/* Hero panel
+---------------------------------------- */
+
+.registration-hero__panel {
+    position: relative;
+
+    min-height: 520px;
+
+    padding:
+        clamp(38px, 5vw, 58px);
+
+    background: var(--color-blue-dark);
+    color: var(--color-white);
+
+    border-radius:
+        28px
+        28px
+        8px
+        28px;
+
+    box-shadow:
+        0 24px 70px
+        rgba(8, 47, 99, 0.16);
+
+    overflow: hidden;
+}
+
+.registration-hero__panel::before {
+    content: "";
+
+    position: absolute;
+
+    top: -170px;
+    right: -170px;
+
+    width: 420px;
+    height: 420px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 50%;
+}
+
+.registration-hero__label {
+    position: relative;
+
+    z-index: 2;
+
+    display: block;
+
+    margin-bottom: 42px;
+
+    color: var(--color-yellow);
+
+    font-size: 11px;
+    font-weight: 850;
+
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+
+/* Hero options
+---------------------------------------- */
+
+.registration-hero__options {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+}
+
+.registration-hero__options > div {
+    display: grid;
+
+    grid-template-columns:
+        42px
+        minmax(0, 1fr);
+
+    align-items: center;
+
+    min-height: 92px;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+}
+
+.registration-hero__options > div:last-child {
+    border-bottom: 0;
+}
+
+.registration-hero__options span {
+    color:
+        rgba(255, 255, 255, 0.36);
+
+    font-size: 11px;
+    font-weight: 850;
+}
+
+.registration-hero__options strong {
+    color: var(--color-white);
+
+    font-size:
+        clamp(21px, 2vw, 27px);
+
+    letter-spacing: -0.025em;
+}
+
+.registration-hero__plus {
+    position: absolute;
+
+    right: 30px;
+    bottom: 15px;
+
+    color:
+        rgba(255, 255, 255, 0.04);
+
+    font-size: 115px;
+    font-weight: 300;
+
+    line-height: 1;
+}
+
+
+/* ========================================
+   INTRO STRIP
+======================================== */
+
+.registration-intro {
+    background: var(--color-blue-dark);
+}
+
+.registration-intro__inner {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+}
+
+.registration-intro__inner > div {
+    min-height: 108px;
+
+    padding:
+        25px
+        30px;
+
+    border-right:
+        1px solid
+        rgba(255, 255, 255, 0.10);
+}
+
+.registration-intro__inner > div:last-child {
+    border-right: 0;
+}
+
+.registration-intro strong,
+.registration-intro span {
+    display: block;
+}
+
+.registration-intro strong {
+    margin-bottom: 5px;
+
+    color: var(--color-white);
+
+    font-size: 14px;
+}
+
+.registration-intro span {
+    color:
+        rgba(255, 255, 255, 0.60);
+
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+
+/* ========================================
+   FORM SECTION
+======================================== */
+
+.registration-form-section {
+    background: var(--color-off-white);
+}
+
+.registration-form-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(260px, 0.52fr)
+        minmax(0, 1fr);
+
+    align-items: start;
+
+    gap:
+        clamp(55px, 8vw, 120px);
+}
+
+
+/* ========================================
+   SIDEBAR
+======================================== */
+
+.registration-form-sidebar {
+    position: sticky;
+
+    top: 145px;
+
+    max-width: 440px;
+}
+
+.registration-form-sidebar h2 {
+    margin:
+        0
+        0
+        22px;
+
+    color: var(--color-blue-dark);
+
+    font-size:
+        clamp(39px, 4vw, 55px);
+
+    line-height: 1.04;
+
+    letter-spacing: -0.045em;
+}
+
+.registration-form-sidebar > p {
+    margin:
+        0
+        0
+        28px;
+
+    color: var(--color-text-soft);
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* Sidebar note
+---------------------------------------- */
+
+.registration-sidebar-note {
+    margin-bottom: 27px;
+
+    padding:
+        20px
+        21px;
+
+    background: var(--color-blue-light);
+
+    border-left:
+        4px solid
+        var(--color-yellow);
+
+    border-radius:
+        0
+        12px
+        12px
+        0;
+}
+
+.registration-sidebar-note strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--color-blue-dark);
+
+    font-size: 13px;
+}
+
+.registration-sidebar-note p {
+    margin: 0;
+
+    color: var(--color-text-soft);
+
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+
+/* ========================================
+   FORM CARD
+======================================== */
+
+.registration-form-card {
+    position: relative;
+
+    max-width: 900px;
+
+    padding:
+        clamp(36px, 5vw, 58px);
+
+    background: var(--color-white);
+
+    border:
+        1px solid
+        var(--color-border);
+
+    border-radius:
+        26px
+        26px
+        8px
+        26px;
+
+    box-shadow:
+        0 24px 70px
+        rgba(8, 47, 99, 0.10);
+}
+
+
+/* ========================================
+   STATUS MESSAGES
+======================================== */
+
+.registration-notice {
+    margin-bottom: 35px;
+
+    padding:
+        18px
+        20px;
+
+    border-radius: 11px;
+}
+
+.registration-notice strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--color-blue-dark);
+
+    font-size: 14px;
+}
+
+.registration-notice p {
+    margin: 0;
+
+    color: var(--color-text-soft);
+
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+.registration-notice--success {
+    background: var(--color-blue-light);
+
+    border-left:
+        4px solid
+        var(--color-blue);
+}
+
+.registration-notice--error {
+    background: var(--color-red-soft);
+
+    border-left:
+        4px solid
+        var(--color-red);
+}
+
+
+/* ========================================
+   FIELDSETS / FORM SECTIONS
+======================================== */
+
+.registration-section {
+    margin: 0;
+
+    padding:
+        0
+        0
+        45px;
+
+    border: 0;
+
+    border-bottom:
+        1px solid
+        var(--color-border);
+}
+
+.registration-section + .registration-section {
+    padding-top: 45px;
+}
+
+.registration-section:last-of-type {
+    padding-bottom: 0;
+
+    border-bottom: 0;
+}
+
+
+/* Legend
+---------------------------------------- */
+
+.registration-section legend {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    width: 100%;
+
+    margin:
+        0
+        0
+        28px;
+
+    padding: 0;
+
+    color: var(--color-blue-dark);
+
+    font-size:
+        clamp(20px, 2vw, 25px);
+
+    font-weight: 850;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.025em;
+}
+
+.registration-section legend > span {
+    display: grid;
+
+    place-items: center;
+
+    flex-shrink: 0;
+
+    width: 35px;
+    height: 35px;
+
+    background: var(--color-blue-light);
+    color: var(--color-red);
+
+    border-radius: 10px;
+
+    font-size: 10px;
+    font-weight: 900;
+
+    letter-spacing: 0.07em;
+}
+
+
+/* ========================================
+   TYPE CHOICES
+======================================== */
+
+.registration-choice-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 12px;
+
+    margin-bottom: 28px;
+}
+
+.registration-choice {
+    position: relative;
+
+    display: block;
+
+    cursor: pointer;
+}
+
+.registration-choice input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.registration-choice__box {
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 130px;
+
+    padding:
+        21px
+        20px;
+
+    background: var(--color-off-white);
+
+    border:
+        1px solid
+        var(--color-border);
+
+    border-radius: 14px;
+
+    transition:
+        background var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition),
+        transform var(--transition);
+}
+
+.registration-choice:hover
+.registration-choice__box {
+    transform: translateY(-2px);
+
+    border-color:
+        rgba(7, 90, 184, 0.22);
+}
+
+.registration-choice__box strong {
+    margin-bottom: 8px;
+
+    color: var(--color-blue-dark);
+
+    font-size: 15px;
+}
+
+.registration-choice__box small {
+    color: var(--color-text-soft);
+
+    font-size: 11px;
+    line-height: 1.55;
+}
+
+
+/* Selected
+---------------------------------------- */
+
+.registration-choice input:checked
++ .registration-choice__box {
+    background: var(--color-blue-light);
+
+    border-color: var(--color-blue);
+
+    box-shadow:
+        0 0 0 2px
+        rgba(7, 90, 184, 0.08);
+}
+
+.registration-choice input:checked
++ .registration-choice__box::after {
+    content: "✓";
+
+    position: absolute;
+
+    top: 13px;
+    right: 13px;
+
+    display: grid;
+
+    place-items: center;
+
+    width: 24px;
+    height: 24px;
+
+    background: var(--color-blue);
+    color: var(--color-white);
+
+    border-radius: 50%;
+
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.registration-choice input:focus-visible
++ .registration-choice__box {
+    outline:
+        3px solid
+        var(--color-yellow);
+
+    outline-offset: 3px;
+}
+
+
+/* ========================================
+   COURSE FIELD
+======================================== */
+
+.registration-course-field {
+    margin-top: 5px;
+}
+
+.registration-course-field[hidden] {
+    display: none !important;
+}
+
+
+/* ========================================
+   FIELD GRIDS
+======================================== */
+
+.registration-fields {
+    display: grid;
+
+    gap: 17px;
+}
+
+.registration-fields + .registration-fields {
+    margin-top: 17px;
+}
+
+.registration-fields--2 {
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+}
+
+.registration-fields--3 {
+    grid-template-columns:
+        0.55fr
+        0.75fr
+        1.7fr;
+}
+
+
+/* ========================================
+   FIELDS
+======================================== */
+
+.registration-field,
+.registration-course-field {
+    margin-bottom: 17px;
+}
+
+.registration-section > .registration-field:last-child,
+.registration-section > .registration-course-field:last-child {
+    margin-bottom: 0;
+}
+
+.registration-field label,
+.registration-course-field > label {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 6px;
+
+    margin-bottom: 8px;
+
+    color: var(--color-blue-dark);
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.registration-field label > span,
+.registration-course-field label > span {
+    color: var(--color-red);
+}
+
+
+/* Inputs
+---------------------------------------- */
+
+.registration-field input,
+.registration-field select,
+.registration-field textarea,
+.registration-course-field select {
+    width: 100%;
+
+    padding:
+        14px
+        15px;
+
+    background: var(--color-off-white);
+    color: var(--color-text);
+
+    border:
+        1px solid
+        var(--color-border);
+
+    border-radius: 10px;
+
+    font: inherit;
+    font-size: 14px;
+
+    transition:
+        background var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.registration-field input,
+.registration-field select,
+.registration-course-field select {
+    min-height: 52px;
+}
+
+.registration-field textarea {
+    min-height: 145px;
+
+    line-height: 1.65;
+
+    resize: vertical;
+}
+
+.registration-field input::placeholder,
+.registration-field textarea::placeholder {
+    color: #99a6b3;
+}
+
+.registration-field input:hover,
+.registration-field select:hover,
+.registration-field textarea:hover,
+.registration-course-field select:hover {
+    border-color:
+        rgba(7, 90, 184, 0.24);
+}
+
+.registration-field input:focus,
+.registration-field select:focus,
+.registration-field textarea:focus,
+.registration-course-field select:focus {
+    outline: none;
+
+    background: var(--color-white);
+
+    border-color: var(--color-blue);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(7, 90, 184, 0.10);
+}
+
+
+/* ========================================
+   CONSENTS
+======================================== */
+
+.registration-consents {
+    display: grid;
+
+    gap: 12px;
+}
+
+.registration-consent {
+    display: grid;
+
+    grid-template-columns:
+        22px
+        minmax(0, 1fr);
+
+    align-items: start;
+
+    gap: 13px;
+
+    padding:
+        17px
+        18px;
+
+    background: var(--color-off-white);
+
+    border:
+        1px solid
+        var(--color-border);
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition:
+        border-color var(--transition),
+        background var(--transition);
+}
+
+.registration-consent:hover {
+    border-color:
+        rgba(7, 90, 184, 0.22);
+}
+
+.registration-consent[hidden] {
+    display: none !important;
+}
+
+
+/* Checkbox
+---------------------------------------- */
+
+.registration-consent > input {
+    width: 19px;
+    height: 19px;
+
+    margin-top: 2px;
+
+    accent-color: var(--color-blue);
+
+    cursor: pointer;
+}
+
+.registration-consent > span {
+    display: block;
+}
+
+.registration-consent strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--color-blue-dark);
+
+    font-size: 13px;
+}
+
+.registration-consent strong em {
+    margin-left: 5px;
+
+    color: var(--color-text-soft);
+
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.registration-consent small {
+    display: block;
+
+    color: var(--color-text-soft);
+
+    font-size: 11px;
+    line-height: 1.65;
+}
+
+
+/* Privacy note
+---------------------------------------- */
+
+.registration-privacy-note {
+    margin:
+        18px
+        0
+        0;
+
+    color: var(--color-text-soft);
+
+    font-size: 11px;
+    line-height: 1.65;
+}
+
+.registration-privacy-note a {
+    color: var(--color-blue);
+
+    font-weight: 750;
+}
+
+
+/* ========================================
+   SUBMIT
+======================================== */
+
+.registration-submit {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-top: 43px;
+}
+
+.registration-submit__button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    gap: 13px;
+
+    min-height: 58px;
+
+    padding:
+        15px
+        26px;
+
+    background: var(--color-blue);
+    color: var(--color-white);
+
+    border: 0;
+    border-radius: var(--radius-small);
+
+    font: inherit;
+    font-size: 14px;
+    font-weight: 850;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 28px
+        rgba(7, 90, 184, 0.18);
+
+    transition:
+        background var(--transition),
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+.registration-submit__button:hover {
+    transform: translateY(-2px);
+
+    background: var(--color-blue-dark);
+
+    box-shadow:
+        0 15px 34px
+        rgba(8, 47, 99, 0.20);
+}
+
+.registration-submit__button span {
+    font-size: 18px;
+
+    transition:
+        transform var(--transition);
+}
+
+.registration-submit__button:hover span {
+    transform: translateX(4px);
+}
+
+.registration-submit__button:focus-visible {
+    outline:
+        3px solid
+        var(--color-yellow);
+
+    outline-offset: 4px;
+}
+
+.registration-submit > p {
+    max-width: 350px;
+
+    margin: 0;
+
+    color: var(--color-text-soft);
+
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   HONEYPOT
+======================================== */
+
+.registration-honeypot {
+    position: absolute !important;
+
+    left: -9999px !important;
+
+    width: 1px;
+    height: 1px;
+
+    overflow: hidden;
+}
+
+
+/* ========================================
+   ANCHOR
+======================================== */
+
+#inschrijfformulier {
+    scroll-margin-top: 140px;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1100px) {
+
+    .registration-form-layout {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .registration-form-sidebar {
+        position: static;
+
+        max-width: 700px;
+    }
+
+    .registration-form-card {
+        max-width: 900px;
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .registration-intro__inner {
+        grid-template-columns: 1fr;
+    }
+
+    .registration-intro__inner > div {
+        min-height: 0;
+
+        padding:
+            20px
+            0;
+
+        border-right: 0;
+
+        border-bottom:
+            1px solid
+            rgba(255, 255, 255, 0.10);
+    }
+
+    .registration-intro__inner > div:last-child {
+        border-bottom: 0;
+    }
+
+    .registration-choice-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .registration-choice__box {
+        min-height: 0;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .registration-hero__panel {
+        min-height: 430px;
+
+        padding:
+            35px
+            28px;
+    }
+
+    .registration-hero__options > div {
+        min-height: 78px;
+    }
+
+
+    .registration-form-section {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .registration-form-card {
+        padding:
+            32px
+            24px;
+    }
+
+
+    .registration-fields--2,
+    .registration-fields--3 {
+        grid-template-columns: 1fr;
+    }
+
+
+    .registration-section {
+        padding-bottom: 36px;
+    }
+
+    .registration-section
+    + .registration-section {
+        padding-top: 36px;
+    }
+
+
+    .registration-submit {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .registration-submit > p {
+        max-width: 500px;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .registration-hero__panel {
+        min-height: 400px;
+
+        padding:
+            30px
+            24px;
+    }
+
+    .registration-hero__label {
+        margin-bottom: 28px;
+    }
+
+    .registration-hero__options > div {
+        grid-template-columns:
+            34px
+            minmax(0, 1fr);
+    }
+
+
+    .registration-form-card {
+        padding:
+            29px
+            20px;
+
+        border-radius:
+            20px
+            20px
+            6px
+            20px;
+    }
+
+
+    .registration-section legend {
+        align-items: flex-start;
+
+        font-size: 19px;
+    }
+
+
+    .registration-consent {
+        padding:
+            15px
+            14px;
+    }
+
+
+    .registration-submit__button {
+        width: 100%;
+    }
+
+}

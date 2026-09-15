@@ -1,0 +1,1246 @@
+/* ========================================
+   EHBO PETRUS DONDERS
+   Hulpverlening aanvragen
+======================================== */
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.event-request-hero {
+    overflow: hidden;
+}
+
+
+/* Hero panel
+---------------------------------------- */
+
+.event-request-hero__panel {
+    position: relative;
+
+    min-height: 520px;
+
+    padding:
+        clamp(40px, 5vw, 60px);
+
+    background: var(--color-blue-dark);
+    color: var(--color-white);
+
+    border-radius:
+        28px
+        28px
+        8px
+        28px;
+
+    box-shadow:
+        0 24px 70px
+        rgba(8, 47, 99, 0.16);
+
+    overflow: hidden;
+}
+
+.event-request-hero__panel::before {
+    content: "";
+
+    position: absolute;
+
+    top: -185px;
+    right: -175px;
+
+    width: 450px;
+    height: 450px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 50%;
+}
+
+.event-request-hero__panel > span {
+    position: relative;
+
+    z-index: 2;
+
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: var(--color-yellow);
+
+    font-size: 10px;
+    font-weight: 850;
+
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+}
+
+.event-request-hero__panel > strong {
+    position: relative;
+
+    z-index: 2;
+
+    display: block;
+
+    max-width: 460px;
+
+    margin-bottom: 34px;
+
+    color: var(--color-white);
+
+    font-size:
+        clamp(35px, 3.8vw, 50px);
+
+    line-height: 1.06;
+
+    letter-spacing: -0.045em;
+}
+
+.event-request-hero__panel > strong b {
+    display: block;
+
+    color: var(--color-yellow);
+
+    font-weight: inherit;
+}
+
+
+/* Hero steps
+---------------------------------------- */
+
+.event-request-hero__steps {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    max-width: 500px;
+}
+
+.event-request-hero__steps > div {
+    display: grid;
+
+    grid-template-columns:
+        42px
+        minmax(0, 1fr);
+
+    align-items: center;
+
+    min-height: 66px;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.11);
+}
+
+.event-request-hero__steps > div:last-child {
+    border-bottom: 0;
+}
+
+.event-request-hero__steps span {
+    color:
+        rgba(255, 255, 255, 0.38);
+
+    font-size: 10px;
+    font-weight: 850;
+}
+
+.event-request-hero__steps p {
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.84);
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.event-request-hero__plus {
+    position: absolute;
+
+    right: 27px;
+    bottom: 5px;
+
+    color:
+        rgba(255, 255, 255, 0.035);
+
+    font-size: 135px;
+    font-weight: 300;
+
+    line-height: 1;
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   INFO STRIP
+======================================== */
+
+.event-request-strip {
+    background: var(--color-blue-dark);
+}
+
+.event-request-strip__inner {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+}
+
+.event-request-strip__inner > div {
+    min-height: 108px;
+
+    padding:
+        25px
+        28px;
+
+    border-right:
+        1px solid
+        rgba(255, 255, 255, 0.10);
+}
+
+.event-request-strip__inner > div:last-child {
+    border-right: 0;
+}
+
+.event-request-strip strong,
+.event-request-strip span {
+    display: block;
+}
+
+.event-request-strip strong {
+    margin-bottom: 5px;
+
+    color: var(--color-white);
+
+    font-size: 14px;
+}
+
+.event-request-strip span {
+    color:
+        rgba(255, 255, 255, 0.60);
+
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+
+/* ========================================
+   FORM SECTION
+======================================== */
+
+.event-request-form-section {
+    background: var(--color-off-white);
+}
+
+.event-request-form-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(270px, 0.52fr)
+        minmax(0, 1fr);
+
+    align-items: start;
+
+    gap:
+        clamp(55px, 8vw, 120px);
+}
+
+
+/* ========================================
+   SIDEBAR
+======================================== */
+
+.event-request-sidebar {
+    position: sticky;
+
+    top: 145px;
+
+    max-width: 445px;
+}
+
+.event-request-sidebar h2 {
+    margin:
+        0
+        0
+        22px;
+
+    color: var(--color-blue-dark);
+
+    font-size:
+        clamp(39px, 4vw, 56px);
+
+    line-height: 1.04;
+
+    letter-spacing: -0.045em;
+}
+
+.event-request-sidebar > p {
+    margin:
+        0
+        0
+        28px;
+
+    color: var(--color-text-soft);
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* Sidebar note
+---------------------------------------- */
+
+.event-request-sidebar__note {
+    margin-bottom: 27px;
+
+    padding:
+        20px
+        22px;
+
+    background: var(--color-blue-light);
+
+    border-left:
+        4px solid
+        var(--color-yellow);
+
+    border-radius:
+        0
+        12px
+        12px
+        0;
+}
+
+.event-request-sidebar__note strong {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: var(--color-blue-dark);
+
+    font-size: 13px;
+}
+
+.event-request-sidebar__note ul {
+    margin: 0;
+
+    padding-left: 18px;
+
+    color: var(--color-text-soft);
+
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   FORM CARD
+======================================== */
+
+.event-request-form-card {
+    position: relative;
+
+    max-width: 900px;
+
+    padding:
+        clamp(36px, 5vw, 58px);
+
+    background: var(--color-white);
+
+    border:
+        1px solid
+        var(--color-border);
+
+    border-radius:
+        26px
+        26px
+        8px
+        26px;
+
+    box-shadow:
+        0 24px 70px
+        rgba(8, 47, 99, 0.10);
+}
+
+
+/* ========================================
+   STATUS MESSAGES
+======================================== */
+
+.event-request-notice {
+    margin-bottom: 35px;
+
+    padding:
+        18px
+        20px;
+
+    border-radius: 11px;
+}
+
+.event-request-notice strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--color-blue-dark);
+
+    font-size: 14px;
+}
+
+.event-request-notice p {
+    margin: 0;
+
+    color: var(--color-text-soft);
+
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+.event-request-notice--success {
+    background: var(--color-blue-light);
+
+    border-left:
+        4px solid
+        var(--color-blue);
+}
+
+.event-request-notice--error {
+    background: var(--color-red-soft);
+
+    border-left:
+        4px solid
+        var(--color-red);
+}
+
+
+/* ========================================
+   FORM BLOCKS
+======================================== */
+
+.event-form-block {
+    margin: 0;
+
+    padding:
+        0
+        0
+        45px;
+
+    border: 0;
+
+    border-bottom:
+        1px solid
+        var(--color-border);
+}
+
+.event-form-block
++ .event-form-block {
+    padding-top: 45px;
+}
+
+.event-form-block:last-of-type {
+    padding-bottom: 0;
+
+    border-bottom: 0;
+}
+
+
+/* Legend
+---------------------------------------- */
+
+.event-form-block legend {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    width: 100%;
+
+    margin:
+        0
+        0
+        30px;
+
+    padding: 0;
+
+    color: var(--color-blue-dark);
+
+    font-size:
+        clamp(20px, 2vw, 25px);
+
+    font-weight: 850;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.025em;
+}
+
+.event-form-block legend > span {
+    display: grid;
+
+    place-items: center;
+
+    flex-shrink: 0;
+
+    width: 35px;
+    height: 35px;
+
+    background: var(--color-blue-light);
+    color: var(--color-red);
+
+    border-radius: 10px;
+
+    font-size: 10px;
+    font-weight: 900;
+
+    letter-spacing: 0.07em;
+}
+
+
+/* ========================================
+   FIELD GRIDS
+======================================== */
+
+.event-fields {
+    display: grid;
+
+    gap: 17px;
+}
+
+.event-fields + .event-fields {
+    margin-top: 17px;
+}
+
+.event-fields--2 {
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+}
+
+
+/* ========================================
+   FIELDS
+======================================== */
+
+.event-field {
+    margin-bottom: 17px;
+}
+
+.event-form-block
+> .event-field:last-child {
+    margin-bottom: 0;
+}
+
+.event-field label {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 6px;
+
+    margin-bottom: 8px;
+
+    color: var(--color-blue-dark);
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.event-field label > span {
+    color: var(--color-red);
+}
+
+
+/* Inputs
+---------------------------------------- */
+
+.event-field input,
+.event-field select,
+.event-field textarea {
+    width: 100%;
+
+    padding:
+        14px
+        15px;
+
+    background: var(--color-off-white);
+    color: var(--color-text);
+
+    border:
+        1px solid
+        var(--color-border);
+
+    border-radius: 10px;
+
+    font: inherit;
+    font-size: 14px;
+
+    transition:
+        background var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.event-field input,
+.event-field select {
+    min-height: 52px;
+}
+
+.event-field textarea {
+    min-height: 145px;
+
+    line-height: 1.65;
+
+    resize: vertical;
+}
+
+.event-field input::placeholder,
+.event-field textarea::placeholder {
+    color: #99a6b3;
+}
+
+.event-field input:hover,
+.event-field select:hover,
+.event-field textarea:hover {
+    border-color:
+        rgba(7, 90, 184, 0.24);
+}
+
+.event-field input:focus,
+.event-field select:focus,
+.event-field textarea:focus {
+    outline: none;
+
+    background: var(--color-white);
+
+    border-color: var(--color-blue);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(7, 90, 184, 0.10);
+}
+
+
+/* Help text
+---------------------------------------- */
+
+.event-field__help {
+    display: block;
+
+    margin-top: 8px;
+
+    color: var(--color-text-soft);
+
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   EVENT DURATION
+======================================== */
+
+.event-duration-choice {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+
+    margin-bottom: 27px;
+}
+
+.event-duration-choice label {
+    position: relative;
+
+    display: block;
+
+    cursor: pointer;
+}
+
+.event-duration-choice input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.event-duration-choice label > span {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 110px;
+
+    padding:
+        20px
+        21px;
+
+    background: var(--color-off-white);
+
+    border:
+        1px solid
+        var(--color-border);
+
+    border-radius: 13px;
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        background var(--transition),
+        box-shadow var(--transition);
+}
+
+.event-duration-choice label:hover > span {
+    transform: translateY(-2px);
+
+    border-color:
+        rgba(7, 90, 184, 0.22);
+}
+
+.event-duration-choice strong {
+    margin-bottom: 7px;
+
+    color: var(--color-blue-dark);
+
+    font-size: 15px;
+}
+
+.event-duration-choice small {
+    color: var(--color-text-soft);
+
+    font-size: 11px;
+    line-height: 1.55;
+}
+
+.event-duration-choice
+input:checked
++ span {
+    background: var(--color-blue-light);
+
+    border-color: var(--color-blue);
+
+    box-shadow:
+        0 0 0 2px
+        rgba(7, 90, 184, 0.08);
+}
+
+.event-duration-choice
+input:checked
++ span::after {
+    content: "✓";
+
+    position: absolute;
+
+    top: 13px;
+    right: 13px;
+
+    display: grid;
+
+    place-items: center;
+
+    width: 24px;
+    height: 24px;
+
+    background: var(--color-blue);
+    color: var(--color-white);
+
+    border-radius: 50%;
+
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.event-duration-choice
+input:focus-visible
++ span {
+    outline:
+        3px solid
+        var(--color-yellow);
+
+    outline-offset: 3px;
+}
+
+
+/* Conditional fields
+---------------------------------------- */
+
+[data-event-end-date][hidden],
+[data-event-different-times][hidden] {
+    display: none !important;
+}
+
+
+/* ========================================
+   CARE POST INFO
+======================================== */
+
+.event-care-info {
+    margin-bottom: 26px;
+
+    padding:
+        24px
+        25px;
+
+    background: var(--color-blue-dark);
+    color: var(--color-white);
+
+    border-radius:
+        16px
+        16px
+        5px
+        16px;
+}
+
+.event-care-info > span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--color-yellow);
+
+    font-size: 9px;
+    font-weight: 850;
+
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+}
+
+.event-care-info h3 {
+    max-width: 570px;
+
+    margin:
+        0
+        11px;
+
+    color: var(--color-white);
+
+    font-size:
+        clamp(23px, 2.5vw, 31px);
+
+    line-height: 1.12;
+
+    letter-spacing: -0.035em;
+}
+
+.event-care-info p {
+    max-width: 620px;
+
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.68);
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   CONFIRMATIONS
+======================================== */
+
+.event-confirmations {
+    display: grid;
+
+    gap: 12px;
+
+    margin-top: 26px;
+}
+
+.event-confirmation {
+    display: grid;
+
+    grid-template-columns:
+        22px
+        minmax(0, 1fr);
+
+    align-items: start;
+
+    gap: 13px;
+
+    padding:
+        17px
+        18px;
+
+    background: var(--color-off-white);
+
+    border:
+        1px solid
+        var(--color-border);
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition:
+        background var(--transition),
+        border-color var(--transition);
+}
+
+.event-confirmation:hover {
+    border-color:
+        rgba(7, 90, 184, 0.22);
+}
+
+.event-confirmation > input {
+    width: 19px;
+    height: 19px;
+
+    margin-top: 2px;
+
+    accent-color: var(--color-blue);
+
+    cursor: pointer;
+}
+
+.event-confirmation > span {
+    display: block;
+}
+
+.event-confirmation strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--color-blue-dark);
+
+    font-size: 13px;
+}
+
+.event-confirmation small {
+    display: block;
+
+    color: var(--color-text-soft);
+
+    font-size: 11px;
+    line-height: 1.65;
+}
+
+
+/* Conditions link
+---------------------------------------- */
+
+.event-form-conditions-link {
+    margin:
+        18px
+        0
+        0;
+
+    color: var(--color-text-soft);
+
+    font-size: 11px;
+    line-height: 1.65;
+}
+
+.event-form-conditions-link a {
+    color: var(--color-blue);
+
+    font-weight: 750;
+}
+
+
+/* ========================================
+   SUBMIT
+======================================== */
+
+.event-form-submit {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-top: 43px;
+}
+
+.event-form-submit__button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    gap: 13px;
+
+    min-height: 58px;
+
+    padding:
+        15px
+        27px;
+
+    background: var(--color-blue);
+    color: var(--color-white);
+
+    border: 0;
+    border-radius: var(--radius-small);
+
+    font: inherit;
+    font-size: 14px;
+    font-weight: 850;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 28px
+        rgba(7, 90, 184, 0.18);
+
+    transition:
+        background var(--transition),
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+.event-form-submit__button:hover {
+    transform: translateY(-2px);
+
+    background: var(--color-blue-dark);
+
+    box-shadow:
+        0 15px 34px
+        rgba(8, 47, 99, 0.20);
+}
+
+.event-form-submit__button span {
+    font-size: 18px;
+
+    transition:
+        transform var(--transition);
+}
+
+.event-form-submit__button:hover span {
+    transform: translateX(4px);
+}
+
+.event-form-submit__button:focus-visible {
+    outline:
+        3px solid
+        var(--color-yellow);
+
+    outline-offset: 4px;
+}
+
+.event-form-submit > p {
+    max-width: 350px;
+
+    margin: 0;
+
+    color: var(--color-text-soft);
+
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   HONEYPOT
+======================================== */
+
+.event-request-honeypot {
+    position: absolute !important;
+
+    left: -9999px !important;
+
+    width: 1px;
+    height: 1px;
+
+    overflow: hidden;
+}
+
+
+/* ========================================
+   ANCHOR
+======================================== */
+
+#aanvraagformulier {
+    scroll-margin-top: 140px;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1100px) {
+
+    .event-request-form-layout {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .event-request-sidebar {
+        position: static;
+
+        max-width: 720px;
+    }
+
+    .event-request-form-card {
+        max-width: 900px;
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .event-request-strip__inner {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .event-request-strip__inner
+    > div:nth-child(2) {
+        border-right: 0;
+    }
+
+    .event-request-strip__inner
+    > div:nth-child(-n + 2) {
+        border-bottom:
+            1px solid
+            rgba(255, 255, 255, 0.10);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .event-request-hero__panel {
+        min-height: 440px;
+
+        padding:
+            35px
+            28px;
+    }
+
+
+    .event-request-form-card {
+        padding:
+            32px
+            24px;
+    }
+
+
+    .event-fields--2 {
+        grid-template-columns: 1fr;
+    }
+
+
+    .event-duration-choice {
+        grid-template-columns: 1fr;
+    }
+
+
+    .event-duration-choice
+    label > span {
+        min-height: 0;
+    }
+
+
+    .event-form-block {
+        padding-bottom: 36px;
+    }
+
+    .event-form-block
+    + .event-form-block {
+        padding-top: 36px;
+    }
+
+
+    .event-form-submit {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .event-form-submit > p {
+        max-width: 500px;
+    }
+
+}
+
+
+@media (max-width: 560px) {
+
+    .event-request-strip__inner {
+        grid-template-columns: 1fr;
+    }
+
+    .event-request-strip__inner > div {
+        min-height: 0;
+
+        border-right: 0;
+
+        border-bottom:
+            1px solid
+            rgba(255, 255, 255, 0.10);
+    }
+
+    .event-request-strip__inner
+    > div:last-child {
+        border-bottom: 0;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .event-request-hero__panel {
+        min-height: 410px;
+
+        padding:
+            30px
+            24px;
+    }
+
+
+    .event-request-form-card {
+        padding:
+            29px
+            20px;
+
+        border-radius:
+            20px
+            20px
+            6px
+            20px;
+    }
+
+
+    .event-form-block legend {
+        align-items: flex-start;
+
+        font-size: 19px;
+    }
+
+
+    .event-care-info {
+        padding:
+            21px
+            20px;
+    }
+
+
+    .event-confirmation {
+        padding:
+            15px
+            14px;
+    }
+
+
+    .event-form-submit__button {
+        width: 100%;
+    }
+
+}
