@@ -33,7 +33,9 @@
 
                     <a
                         class="section-button"
-                        href="#inschrijven-oefenavonden"
+                        href="<?php echo esc_url(
+                            home_url('/lesavond-aanmelden/')
+                        ); ?>"
                     >
                         Inschrijven voor een oefenavond
 
@@ -42,7 +44,9 @@
 
                     <a
                         class="text-link"
-                        href="#rooster"
+                        href="<?php echo esc_url(
+                            home_url('/stempelkaart-lesavonden/')
+                        ); ?>"
                     >
                         Bekijk het lesavondrooster
 
@@ -85,7 +89,9 @@
                     <!-- Oefenavonden -->
                     <a
                         class="practice-item"
-                        href="#inschrijven-oefenavonden"
+                        href="<?php echo esc_url(
+                            home_url('/lesavond-aanmelden/')
+                        ); ?>"
                     >
 
                         <span class="practice-item__icon practice-item__icon--blue">
@@ -130,7 +136,9 @@
                     <!-- Hercertificering -->
                     <a
                         class="practice-item"
-                        href="#hercertificering"
+                        href="<?php echo esc_url(
+                            home_url('/informatie/#hercertificering')
+                        ); ?>"
                     >
 
                         <span class="practice-item__icon practice-item__icon--red">
@@ -177,7 +185,9 @@
                     <!-- Rooster -->
                     <a
                         class="practice-item"
-                        href="#rooster"
+                        href="<?php echo esc_url(
+                            home_url('/stempelkaart-lesavonden/')
+                        ); ?>"
                     >
 
                         <span class="practice-item__icon practice-item__icon--yellow">

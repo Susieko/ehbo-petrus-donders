@@ -33,7 +33,9 @@
 
                     <a
                         class="volunteer-button"
-                        href="#vrijwilliger-worden"
+                        href="<?php echo esc_url(
+                            home_url('/word-lid/#mogelijkheden')
+                        ); ?>"
                     >
                         Word vrijwilliger
 

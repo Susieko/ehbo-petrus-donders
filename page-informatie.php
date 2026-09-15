@@ -1286,7 +1286,7 @@ get_header();
      CLOSING
 ======================================== -->
 
-<section class="information-closing">
+<section class="information-closing" id="lidmaatschap">
 
     <div class="container">
 

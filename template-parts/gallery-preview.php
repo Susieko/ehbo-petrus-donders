@@ -38,7 +38,7 @@
             <a
                 class="gallery-preview__card gallery-preview__card--practice"
                 href="<?php echo esc_url(
-    home_url('/fotogalerij/#opleiding')
+    home_url('/fotogalerij/#momenten')
 ); ?>">
                 <img
                     src="<?php echo esc_url(
@@ -62,7 +62,7 @@
             <a
                 class="gallery-preview__card gallery-preview__card--jubilee"
                 href="<?php echo esc_url(
-    home_url('/fotogalerij/#vereniging')
+    home_url('/fotogalerij/#momenten')
 ); ?>">
                 <img
                     src="<?php echo esc_url(
@@ -86,7 +86,7 @@
             <a
                 class="gallery-preview__card gallery-preview__card--graduates"
                 href="<?php echo esc_url(
-    home_url('/fotogalerij/#geslaagden')
+    home_url('/fotogalerij/#momenten')
 ); ?>">
                 <img
                     src="<?php echo esc_url(

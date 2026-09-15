@@ -65,7 +65,9 @@
 
             <a
                 class="training-card__link"
-                href="#opleiding-diploma-eerste-hulp"
+                href="<?php echo esc_url(
+                    home_url('/opleidingen/#diploma-eerste-hulp')
+                ); ?>"
             >
                 Meer over deze opleiding
                 <span aria-hidden="true">→</span>
@@ -127,7 +129,9 @@
 
                     <a
                         class="training-card__link"
-                        href="#eerste-hulp-aan-kinderen"
+                        href="<?php echo esc_url(
+                            home_url('/opleidingen/#eerste-hulp-kinderen')
+                        ); ?>"
                     >
                         Bekijk opleiding
 
@@ -171,7 +175,9 @@
 
                     <a
                         class="training-card__link"
-                        href="#reanimatie"
+                        href="<?php echo esc_url(
+                            home_url('/opleidingen/#reanimatie')
+                        ); ?>"
                     >
                         Bekijk opleiding
 
@@ -216,7 +222,9 @@
 
                     <a
                         class="training-card__link"
-                        href="#sport-en-wandelletsels"
+                        href="<?php echo esc_url(
+                            home_url('/opleidingen/#wandelletsels')
+                        ); ?>"
                     >
                         Bekijk opleiding
 
@@ -260,7 +268,9 @@
 
                     <a
                         class="training-card__link"
-                        href="#stop-de-bloeding"
+                        href="<?php echo esc_url(
+                            home_url('/opleidingen/#stop-de-bloeding')
+                        ); ?>"
                     >
                         Bekijk opleiding
 
@@ -278,7 +288,9 @@
 
             <a
                 class="section-button"
-                href="#alle-opleidingen"
+                href="<?php echo esc_url(
+                    home_url('/opleidingen/')
+                ); ?>"
             >
                 Bekijk alle opleidingen
 

@@ -15,13 +15,7 @@ $publication_types = [
 
 $latest_publications = [];
 
-$archive_page = get_page_by_path(
-    'informatie/publicaties'
-);
-
-$archive_url = $archive_page
-    ? get_permalink($archive_page)
-    : home_url('/informatie/publicaties/');
+$archive_url = home_url('/publicaties/');
 
 foreach ($publication_types as $type => $settings) {
 

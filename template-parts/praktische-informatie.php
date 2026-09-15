@@ -31,7 +31,9 @@
             <!-- Lidmaatschap & opleidingen -->
             <a
                 class="practical-card practical-card--blue"
-                href="#lidmaatschap"
+                href="<?php echo esc_url(
+                    home_url('/inschrijven/')
+                ); ?>"
             >
 
                 <div class="practical-card__icon" aria-hidden="true">
@@ -82,7 +84,9 @@
             <!-- Les- en oefenavonden -->
             <a
                 class="practical-card practical-card--red"
-                href="#inschrijven-oefenavonden"
+                href="<?php echo esc_url(
+                    home_url('/lesavond-aanmelden/')
+                ); ?>"
             >
 
                 <div class="practical-card__icon" aria-hidden="true">
@@ -133,7 +137,9 @@
             <!-- Rooster -->
             <a
                 class="practical-card practical-card--yellow"
-                href="#rooster"
+                href="<?php echo esc_url(
+                    home_url('/stempelkaart-lesavonden/')
+                ); ?>"
             >
 
                 <div class="practical-card__icon" aria-hidden="true">
@@ -189,7 +195,9 @@
             <!-- Hulpverlening aanvragen -->
             <a
                 class="practical-card practical-card--dark"
-                href="#hulpverlening-aanvragen"
+                href="<?php echo esc_url(
+                    home_url('/hulpverlening-aanvragen/')
+                ); ?>"
             >
 
                 <div class="practical-card__icon" aria-hidden="true">
@@ -264,7 +272,9 @@
 
             <a
                 class="practical-contact__link"
-                href="#contact"
+                href="<?php echo esc_url(
+                    home_url('/contact/')
+                ); ?>"
             >
                 Neem contact op
 

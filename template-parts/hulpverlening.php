@@ -116,7 +116,9 @@
 
                     <a
                         class="section-button section-button--yellow"
-                        href="#hulpverlening-aanvragen"
+                        href="<?php echo esc_url(
+                            home_url('/hulpverlening-aanvragen/')
+                        ); ?>"
                     >
                         Hulpverlening aanvragen
 
@@ -125,7 +127,9 @@
 
                     <a
                         class="text-link"
-                        href="#meer-over-hulpverlening"
+                        href="<?php echo esc_url(
+                            home_url('/hulpverlening/')
+                        ); ?>"
                     >
                         Meer over hulpverlening
 

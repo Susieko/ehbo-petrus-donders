@@ -310,7 +310,7 @@ $is_word_lid =
                     <a
                         href="<?php echo esc_url(
                             home_url(
-                                '/opleidingen/#sport-wandelletsels'
+                                '/opleidingen/#wandelletsels'
                             )
                         ); ?>"
                     >
@@ -689,7 +689,7 @@ $is_word_lid =
                 <a
                     href="<?php echo esc_url(
                         home_url(
-                            '/opleidingen/#sport-wandelletsels'
+                            '/opleidingen/#wandelletsels'
                         )
                     ); ?>"
                 >

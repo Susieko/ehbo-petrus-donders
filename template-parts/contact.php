@@ -126,8 +126,38 @@
                     class="contact-form"
                     id="contactformulier"
                     method="post"
-                    action=""
+                    action="<?php echo esc_url(
+                        admin_url('admin-post.php')
+                    ); ?>"
                 >
+
+                    <input
+                        type="hidden"
+                        name="action"
+                        value="ehbo_contact_form"
+                    >
+
+                    <?php wp_nonce_field(
+                        'ehbo_contact_form',
+                        'ehbo_contact_nonce'
+                    ); ?>
+
+                    <div
+                        class="screen-reader-text"
+                        aria-hidden="true"
+                    >
+                        <label for="home-contact-website">
+                            Website
+                        </label>
+
+                        <input
+                            type="text"
+                            id="home-contact-website"
+                            name="contact_website"
+                            tabindex="-1"
+                            autocomplete="off"
+                        >
+                    </div>
 
                     <div class="contact-form__row">
 

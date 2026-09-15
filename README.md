@@ -128,9 +128,9 @@ Scores can vary depending on hosting, browser version, network conditions, and p
 
 ## Environment portability
 
-Theme URLs use WordPress helpers such as `home_url()`, `get_theme_file_uri()`, and `wp_upload_dir()` rather than relying on local development URLs.
+Internal theme and site URLs use WordPress helpers such as `home_url()`, `get_theme_file_uri()`, and `wp_upload_dir()` instead of local development URLs.
 
-This allows the theme to move between local development and production environments without hard-coded domains.
+This keeps the theme portable between local development and production environments.
 
 ## Development workflow
 
@@ -158,7 +158,7 @@ Examples include:
 
 3. Activate **EHBO Petrus Donders** in the WordPress admin.
 4. Create the required WordPress pages and assign the matching page templates.
-5. Configure the main navigation and WordPress admin email address.
+5. Configure the WordPress admin email address used by the custom forms.
 6. Add the required media, gallery images, and publications through the WordPress admin.
 7. Refresh WordPress permalinks after setup if necessary.
 
