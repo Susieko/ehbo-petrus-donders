@@ -348,9 +348,9 @@ $is_word_lid =
                     href="<?php echo esc_url(
                         home_url('/hulpverlening/')
                     ); ?>"
-                    <?php if ($is_hulpverlening) : ?>
-                        aria-current="page"
-                    <?php endif; ?>
+<?php if ($current_path === 'hulpverlening') : ?>
+    aria-current="page"
+<?php endif; ?>
                 >
 
                     Hulpverlening
@@ -406,9 +406,9 @@ $is_word_lid =
                     href="<?php echo esc_url(
                         home_url('/informatie/')
                     ); ?>"
-                    <?php if ($is_informatie) : ?>
-                        aria-current="page"
-                    <?php endif; ?>
+<?php if ($current_path === 'informatie') : ?>
+    aria-current="page"
+<?php endif; ?>
                 >
 
                     Informatie
