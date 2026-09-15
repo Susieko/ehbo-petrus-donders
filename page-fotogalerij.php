@@ -6,90 +6,9 @@ Template Post Type: page
 
 get_header();
 
-
-/* ========================================
-   GALLERY IMAGES
-======================================== */
-
-$theme_dir = get_stylesheet_directory();
-$theme_uri = get_stylesheet_directory_uri();
-
-$gallery_files = glob(
-    $theme_dir . '/assets/images/gallery-*.*'
+$gallery_images = ehbo_get_gallery_images(
+    get_queried_object_id()
 );
-
-natsort($gallery_files);
-$gallery_files = array_reverse(
-    array_values($gallery_files)
-);
-
-
-/*
- * Handmatige namen/captions voor bekende beelden.
- * Alles wat hier niet in staat krijgt automatisch
- * een nette titel op basis van de bestandsnaam.
- */
-$gallery_labels = [
-    'gallery-oefenen'    => [
-        'title'   => 'Samen oefenen',
-        'caption' => 'Praktijkmomenten waarin leden en deelnemers EHBO-vaardigheden oefenen.',
-        'alt'     => 'EHBO-leden oefenen samen',
-    ],
-    'gallery-jubilaris'  => [
-        'title'   => 'Jubilarissen',
-        'caption' => 'Een bijzonder moment binnen de vereniging.',
-        'alt'     => 'Jubilarissen van EHBO Petrus Donders',
-    ],
-    'gallery-geslaagden' => [
-        'title'   => 'Geslaagde deelnemers',
-        'caption' => 'Trots op deelnemers die hun opleiding succesvol hebben afgerond.',
-        'alt'     => 'Geslaagde deelnemers van EHBO Petrus Donders',
-    ],
-];
-
-
-$gallery_images = [];
-
-
-foreach ($gallery_files as $file_path) {
-
-    $filename   = pathinfo($file_path, PATHINFO_FILENAME);
-    $basename   = basename($file_path);
-    $image_url  = $theme_uri . '/assets/images/' . $basename;
-
-
-    if (isset($gallery_labels[$filename])) {
-
-        $title   = $gallery_labels[$filename]['title'];
-        $caption = $gallery_labels[$filename]['caption'];
-        $alt     = $gallery_labels[$filename]['alt'];
-
-    } else {
-
-        $clean_name = str_replace(
-            ['gallery-', '-', '_'],
-            ['', ' ', ' '],
-            $filename
-        );
-
-        $title = ucwords($clean_name);
-
-        $caption =
-            'Een moment uit de vereniging, vastgelegd in beeld.';
-
-        $alt =
-            $title . ' - EHBO Petrus Donders';
-    }
-
-
-    $gallery_images[] = [
-        'url'     => $image_url,
-        'title'   => $title,
-        'caption' => $caption,
-        'alt'     => $alt,
-    ];
-}
-
 
 $total_images = count($gallery_images);
 
@@ -110,7 +29,6 @@ $wall_images = array_slice(
     min(5, $total_images)
 );
 ?>
-
 
 <main
     id="main-content"
@@ -364,7 +282,7 @@ $wall_images = array_slice(
 
                             <a
                                 href="<?php echo esc_url(
-                                    $image['url']
+                                    $image['full_url']
                                 ); ?>"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -417,26 +335,25 @@ $wall_images = array_slice(
 
             <?php else : ?>
 
-                <div class="gallery-empty-state">
+    <div class="gallery-empty-state">
 
-                    <span aria-hidden="true">
-                        +
-                    </span>
+        <span aria-hidden="true">
+            +
+        </span>
 
-                    <h3>
-                        Nog geen foto’s toegevoegd.
-                    </h3>
+        <h3>
+            Nog geen foto’s toegevoegd.
+        </h3>
 
-                    <p>
-                        Voeg afbeeldingen toe in
-                        <code>assets/images/</code> met bestandsnamen
-                        die beginnen met <code>gallery-</code>,
-                        bijvoorbeeld <code>gallery-oefenen.jpg</code>.
-                    </p>
+        <p>
+            Binnenkort vind je hier foto’s van
+            opleidingen, oefenavonden en andere
+            momenten uit onze vereniging.
+        </p>
 
-                </div>
+    </div>
 
-            <?php endif; ?>
+<?php endif; ?>
 
         </div>
 
@@ -489,7 +406,7 @@ $wall_images = array_slice(
                             <a
                                 class="gallery-card__image"
                                 href="<?php echo esc_url(
-                                    $image['url']
+                                    $image['full_url']
                                 ); ?>"
                                 target="_blank"
                                 rel="noopener noreferrer"
