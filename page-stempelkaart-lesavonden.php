@@ -5,11 +5,11 @@ Template Name: Stempelkaart lesavonden
 
 get_header();
 
-/*
- * Replace this URL with the URL copied from
- * the WordPress media library.
- */
-$pdf_url = 'http://ehbo-petrus-donders/wp-content/uploads/2026/08/Uitleg-gebruik-stempel-presentatiekaart.pdf';
+$uploads = wp_upload_dir();
+
+$pdf_url =
+    trailingslashit($uploads['baseurl']) .
+    '2026/08/Uitleg-gebruik-stempel-presentatiekaart.pdf';
 ?>
 
 <main id="main-content">
