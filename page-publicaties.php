@@ -17,21 +17,13 @@ $publication_types = [
 ];
 
 
-$publication_ids = get_posts([
-    'post_type'      => 'ehbo_publicatie',
-    'post_status'    => 'publish',
-    'posts_per_page' => -1,
-    'orderby'        => 'date',
-    'order'          => 'DESC',
-    'fields'         => 'ids',
-]);
-
-
-$all_publications  = [];
-$archive_by_year   = [];
-
-
-foreach ($publication_ids as $publication_id) {
+/*
+ * Zet een publicatie-ID om naar
+ * de gegevens die de template gebruikt.
+ */
+$build_publication = static function (
+    $publication_id
+) use ($publication_types) {
 
     $type = get_post_meta(
         $publication_id,
@@ -40,9 +32,8 @@ foreach ($publication_ids as $publication_id) {
     );
 
     if (!isset($publication_types[$type])) {
-        continue;
+        return null;
     }
-
 
     $pdf_id = (int) get_post_meta(
         $publication_id,
@@ -50,23 +41,16 @@ foreach ($publication_ids as $publication_id) {
         true
     );
 
-
     $description = get_post_meta(
         $publication_id,
         '_ehbo_publication_description',
         true
     );
 
-
     $pdf_url = $pdf_id
         ? wp_get_attachment_url($pdf_id)
         : '';
 
-
-    /*
-     * WordPress kan bij PDF's automatisch
-     * een preview-afbeelding genereren.
-     */
     $preview_url = $pdf_id
         ? wp_get_attachment_image_url(
             $pdf_id,
@@ -74,52 +58,104 @@ foreach ($publication_ids as $publication_id) {
         )
         : '';
 
-
-    $year = get_the_date(
-        'Y',
-        $publication_id
-    );
-
-
-    $publication = [
+    return [
         'id'          => $publication_id,
         'type'        => $type,
         'type_label'  => $publication_types[$type],
         'title'       => get_the_title($publication_id),
 
-        'date'        => get_the_date(
+        'date' => get_the_date(
             'j F Y',
             $publication_id
         ),
 
-        'date_short'  => get_the_date(
+        'date_short' => get_the_date(
             'j M Y',
             $publication_id
         ),
 
-        'date_iso'    => get_the_date(
+        'date_iso' => get_the_date(
             'c',
             $publication_id
         ),
 
-        'year'        => $year,
+        'year' => get_the_date(
+            'Y',
+            $publication_id
+        ),
 
         'description' => $description,
-
         'pdf_url'     => $pdf_url,
-
         'preview_url' => $preview_url,
     ];
+};
 
 
-    $all_publications[] =
-        $publication;
+/* ========================================
+   HERO + NIEUWSTE PUBLICATIE
+======================================== */
 
+$hero_query = new WP_Query([
+    'post_type'      => 'ehbo_publicatie',
+    'post_status'    => 'publish',
+    'posts_per_page' => 3,
+    'orderby'        => 'date',
+    'order'          => 'DESC',
+    'fields'         => 'ids',
+    'no_found_rows'  => true,
+]);
 
-    $archive_by_year[$year][] =
-        $publication;
+$hero_publications = [];
+
+foreach ($hero_query->posts as $publication_id) {
+
+    $publication =
+        $build_publication($publication_id);
+
+    if ($publication) {
+        $hero_publications[] = $publication;
+    }
 }
 
+$latest_publication =
+    $hero_publications[0] ?? null;
+
+
+/* ========================================
+   ARCHIEF MET PAGINATION
+======================================== */
+
+$archive_page = max(
+    1,
+    (int) get_query_var('paged'),
+    (int) get_query_var('page')
+);
+
+$archive_query = new WP_Query([
+    'post_type'      => 'ehbo_publicatie',
+    'post_status'    => 'publish',
+    'posts_per_page' => 9,
+    'paged'          => $archive_page,
+    'orderby'        => 'date',
+    'order'          => 'DESC',
+    'fields'         => 'ids',
+]);
+
+$archive_by_year = [];
+
+foreach ($archive_query->posts as $publication_id) {
+
+    $publication =
+        $build_publication($publication_id);
+
+    if (!$publication) {
+        continue;
+    }
+
+    $archive_by_year[
+        $publication['year']
+    ][] = $publication;
+}
 
 krsort(
     $archive_by_year,
@@ -127,24 +163,34 @@ krsort(
 );
 
 
-$latest_publication =
-    $all_publications[0] ?? null;
+/* ========================================
+   TYPE COUNTERS
+======================================== */
 
+$count_publications = static function ($type) {
 
-$total_newsletters = 0;
-$total_dondersteentjes = 0;
+    $count_query = new WP_Query([
+        'post_type'      => 'ehbo_publicatie',
+        'post_status'    => 'publish',
+        'posts_per_page' => 1,
+        'fields'         => 'ids',
 
+        'meta_query' => [
+            [
+                'key'   => '_ehbo_publication_type',
+                'value' => $type,
+            ],
+        ],
+    ]);
 
-foreach ($all_publications as $publication) {
+    return (int) $count_query->found_posts;
+};
 
-    if ($publication['type'] === 'nieuwsbrief') {
-        $total_newsletters++;
-    }
+$total_newsletters =
+    $count_publications('nieuwsbrief');
 
-    if ($publication['type'] === 'dondersteentje') {
-        $total_dondersteentjes++;
-    }
-}
+$total_dondersteentjes =
+    $count_publications('dondersteentje');
 ?>
 
 
@@ -215,19 +261,6 @@ foreach ($all_publications as $publication) {
             <div class="page-hero__visual">
 
                 <div class="publications-stack reveal">
-
-
-                    <?php
-
-                    $hero_publications =
-                        array_slice(
-                            $all_publications,
-                            0,
-                            3
-                        );
-
-                    ?>
-
 
                     <?php if ($hero_publications) : ?>
 
@@ -935,6 +968,36 @@ foreach ($all_publications as $publication) {
 
                 </div>
 
+                <?php
+                $pagination = paginate_links([
+                    'base' => str_replace(
+                        999999999,
+                        '%#%',
+                        esc_url(
+                            get_pagenum_link(999999999)
+                        )
+                    ),
+                    'current' => $archive_page,
+                    'total' => $archive_query->max_num_pages,
+                    'mid_size' => 1,
+                    'end_size' => 1,
+                    'prev_text' => '← Vorige',
+                    'next_text' => 'Volgende →',
+                    'type' => 'list',
+                    'add_fragment' => '#publicatiearchief',
+                ]);
+                ?>
+
+                <?php if ($pagination) : ?>
+
+                    <nav
+                        class="publication-pagination"
+                        aria-label="Publicatiearchief pagina's"
+                    >
+                        <?php echo wp_kses_post($pagination); ?>
+                    </nav>
+
+                <?php endif; ?>
 
             <?php else : ?>
 

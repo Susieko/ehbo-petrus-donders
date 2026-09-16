@@ -353,7 +353,7 @@ $form_status = isset($_GET['lesavond_status'])
 
 
                     <!-- ========================================
-                         01 — MEMBER
+                         01 - MEMBER
                     ========================================= -->
 
                     <fieldset class="lesson-form-section-block">
@@ -546,7 +546,7 @@ $form_status = isset($_GET['lesavond_status'])
 
 
                     <!-- ========================================
-                         02 — DATES
+                         02 - DATES
                     ========================================= -->
 
                     <fieldset class="lesson-form-section-block">
@@ -684,7 +684,7 @@ $form_status = isset($_GET['lesavond_status'])
 
 
                     <!-- ========================================
-                         03 — EXTRA
+                         03 - EXTRA
                     ========================================= -->
 
                     <fieldset class="lesson-form-section-block">

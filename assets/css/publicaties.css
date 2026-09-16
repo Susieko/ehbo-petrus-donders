@@ -1,6 +1,6 @@
 /* ========================================
    EHBO PETRUS DONDERS
-   Publicaties — editorial layout
+   Publicaties - editorial layout
 ======================================== */
 
 
@@ -1050,7 +1050,7 @@
 
 
 /* ========================================
-   PUBLICATION TYPES — SMALL STRIP
+   PUBLICATION TYPES - SMALL STRIP
 ======================================== */
 
 .publication-about {
@@ -1405,6 +1405,107 @@
         padding:
             35px
             27px;
+    }
+
+}
+
+/* ========================================
+   PAGINATION
+======================================== */
+
+.publication-pagination {
+    display: flex;
+    justify-content: center;
+
+    margin-top:
+        clamp(45px, 6vw, 70px);
+}
+
+.publication-pagination .page-numbers {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.publication-pagination
+.page-numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+}
+
+.publication-pagination
+.page-numbers li {
+    margin: 0;
+}
+
+.publication-pagination
+.page-numbers a,
+
+.publication-pagination
+.page-numbers span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 42px;
+    min-height: 42px;
+
+    padding:
+        8px
+        13px;
+
+    background: var(--color-white);
+    color: var(--color-blue-dark);
+
+    border:
+        1px solid
+        var(--color-border);
+
+    border-radius: 10px;
+
+    font-size: 13px;
+    font-weight: 750;
+
+    text-decoration: none;
+
+    transition:
+        border-color var(--transition),
+        background var(--transition),
+        color var(--transition);
+}
+
+.publication-pagination
+.page-numbers a:hover {
+    border-color: var(--color-blue);
+
+    color: var(--color-blue);
+}
+
+.publication-pagination
+.page-numbers .current {
+    background: var(--color-blue);
+    color: var(--color-white);
+
+    border-color: var(--color-blue);
+}
+
+.publication-pagination
+.prev,
+.publication-pagination
+.next {
+    width: auto;
+}
+
+
+@media (max-width: 520px) {
+
+    .publication-pagination
+    .page-numbers {
+        flex-wrap: wrap;
     }
 
 }

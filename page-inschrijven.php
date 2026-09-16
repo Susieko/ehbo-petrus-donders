@@ -371,7 +371,7 @@ $form_status = isset($_GET['inschrijving_status'])
 
 
                     <!-- ========================================
-                         01 — TYPE
+                         01 - TYPE
                     ========================================= -->
 
                     <fieldset class="registration-section">
@@ -528,7 +528,7 @@ $form_status = isset($_GET['inschrijving_status'])
 
 
                     <!-- ========================================
-                         02 — PERSONAL DETAILS
+                         02 - PERSONAL DETAILS
                     ========================================= -->
 
                     <fieldset class="registration-section">
@@ -704,7 +704,7 @@ $form_status = isset($_GET['inschrijving_status'])
 
 
                     <!-- ========================================
-                         03 — CONTACT
+                         03 - CONTACT
                     ========================================= -->
 
                     <fieldset class="registration-section">
@@ -838,7 +838,7 @@ $form_status = isset($_GET['inschrijving_status'])
 
 
                     <!-- ========================================
-                         04 — EXTRA
+                         04 - EXTRA
                     ========================================= -->
 
                     <fieldset class="registration-section">
@@ -906,7 +906,7 @@ $form_status = isset($_GET['inschrijving_status'])
 
 
                     <!-- ========================================
-                         05 — PRIVACY
+                         05 - PRIVACY
                     ========================================= -->
 
                     <fieldset class="registration-section">

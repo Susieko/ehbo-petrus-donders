@@ -1024,7 +1024,7 @@
 }
 
 /* ========================================
-   VACANCIES — CLEANER CARDS
+   VACANCIES - CLEANER CARDS
 ======================================== */
 
 .join-vacancies__grid {
@@ -1406,7 +1406,7 @@
 
 
 
-    /* Word lid — Geen passende vacature? */
+    /* Word lid - Geen passende vacature? */
     .join-open__inner {
         grid-template-columns: 1fr;
         gap: 24px;

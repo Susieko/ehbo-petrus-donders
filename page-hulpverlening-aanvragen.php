@@ -383,7 +383,7 @@ $form_status = isset($_GET['hulpverlening_status'])
 
 
                     <!-- ========================================
-                         01 — ORGANISATION
+                         01 - ORGANISATION
                     ========================================= -->
 
                     <fieldset class="event-form-block">
@@ -562,7 +562,7 @@ $form_status = isset($_GET['hulpverlening_status'])
 
 
                     <!-- ========================================
-                         02 — EVENT
+                         02 - EVENT
                     ========================================= -->
 
                     <fieldset class="event-form-block">
@@ -756,7 +756,7 @@ $form_status = isset($_GET['hulpverlening_status'])
 
 
                     <!-- ========================================
-                         03 — PLANNING
+                         03 - PLANNING
                     ========================================= -->
 
                     <fieldset class="event-form-block">
@@ -1017,7 +1017,7 @@ $form_status = isset($_GET['hulpverlening_status'])
 
 
                     <!-- ========================================
-                         04 — FIRST AID
+                         04 - FIRST AID
                     ========================================= -->
 
                     <fieldset class="event-form-block">
@@ -1082,7 +1082,7 @@ $form_status = isset($_GET['hulpverlening_status'])
 
 
                     <!-- ========================================
-                         05 — CARE POST / CONDITIONS
+                         05 - CARE POST / CONDITIONS
                     ========================================= -->
 
                     <fieldset class="event-form-block">

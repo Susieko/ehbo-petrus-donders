@@ -68,6 +68,18 @@ function ehbo_petrus_donders_assets() {
         );
     }
 
+    // Search.
+if (is_search()) {
+    wp_enqueue_style(
+        'ehbo-search',
+        $theme_uri . '/assets/css/search.css',
+        ['ehbo-page-base'],
+        filemtime(
+            $theme_dir . '/assets/css/search.css'
+        )
+    );
+}
+
     // Page-specific styles.
     $page_styles = [
         'over-ons' => [

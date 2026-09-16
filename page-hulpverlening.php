@@ -320,7 +320,7 @@ endwhile;
                 <p class="assistance-volunteer__lead">
                     Lijkt het je leuk om tijdens evenementen zelf
                     eerste hulp te verlenen? Nieuwe vrijwilligers
-                    zijn welkom — ook wanneer je nog geen
+                    zijn welkom, ook wanneer je nog geen
                     EHBO-diploma hebt.
                 </p>
 
