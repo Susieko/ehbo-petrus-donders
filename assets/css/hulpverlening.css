@@ -1526,3 +1526,155 @@
     }
 
 }
+
+/* ========================================
+   GUTENBERG COMPATIBILITY
+======================================== */
+
+.assistance-intro__inner
+> .wp-block-group__inner-container,
+
+.assistance-intro__heading
+> .wp-block-group__inner-container,
+
+.assistance-intro__content
+> .wp-block-group__inner-container {
+    display: contents;
+}
+
+/* Gutenberg event types */
+
+.assistance-types__header
+> .wp-block-group__inner-container,
+
+.assistance-types__grid
+> .wp-block-group__inner-container {
+    display: contents;
+}
+
+/* Gutenberg quality */
+
+.assistance-quality__inner
+> .wp-block-group__inner-container,
+
+.assistance-quality__visual
+> .wp-block-group__inner-container,
+
+.assistance-quality__visual-label
+> .wp-block-group__inner-container,
+
+.assistance-quality__content
+> .wp-block-group__inner-container,
+
+.assistance-quality__features
+> .wp-block-group__inner-container,
+
+.assistance-quality__feature
+> .wp-block-group__inner-container {
+    display: contents;
+}
+
+
+/* Gutenberg image */
+
+.assistance-quality__visual .wp-block-image {
+    margin: 0;
+}
+
+
+/* Yellow image label */
+
+.assistance-quality__label-small {
+    margin:
+        0
+        0
+        2px;
+
+    color: var(--color-red);
+
+    font-size: 10px;
+    font-weight: 850;
+
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+}
+
+.assistance-quality__label-title {
+    margin: 0;
+
+    color: var(--color-blue-dark);
+
+    font-size: 15px;
+    font-weight: 700;
+
+    line-height: 1.4;
+}
+
+
+/* Feature numbers */
+
+.assistance-quality__feature-number {
+    margin: 0;
+
+    padding-top: 3px;
+
+    color: var(--color-red);
+
+    font-size: 11px;
+    font-weight: 850;
+
+    letter-spacing: 0.08em;
+}
+
+/* Gutenberg process */
+
+.assistance-process__inner
+> .wp-block-group__inner-container,
+
+.assistance-process__content
+> .wp-block-group__inner-container,
+
+.assistance-process__steps
+> .wp-block-group__inner-container,
+
+.assistance-step
+> .wp-block-group__inner-container {
+    display: contents;
+}
+
+/* Gutenberg organiser */
+
+.assistance-organiser__inner
+> .wp-block-group__inner-container,
+
+.assistance-organiser__content
+> .wp-block-group__inner-container,
+
+.assistance-organiser__cards
+> .wp-block-group__inner-container,
+
+.assistance-organiser__card
+> .wp-block-group__inner-container {
+    display: contents;
+}
+
+
+/* Card numbers */
+
+.assistance-organiser__number {
+    display: block;
+
+    margin:
+        0
+        0
+        26px;
+
+    color: var(--color-red);
+
+    font-size: 11px;
+    font-weight: 850;
+
+    line-height: 1;
+
+    letter-spacing: 0.08em;
+}

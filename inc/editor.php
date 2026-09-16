@@ -64,6 +64,66 @@ function ehbo_register_editor_patterns() {
     'description' =>
         'Hero voor de Over ons-pagina met tekst, acties en afbeelding.',
 ],
+
+'information-locations' => [
+    'title' => 'Informatie - Leslocaties',
+    'description' =>
+        'Leslocaties, lestijden en verwijzing naar het lesrooster.',
+],
+
+'information-lessons' => [
+    'title' => 'Informatie - Les- & oefenavonden',
+    'description' =>
+        'Informatie over lesavonden, oefenen en de presentiekaart.',
+],
+
+'information-recertification' => [
+    'title' => 'Informatie - Hercertificering',
+    'description' =>
+        'Uitleg over hercertificering, competenties en het stappenplan.',
+],
+
+'information-prices' => [
+    'title' => 'Informatie - Prijzen',
+    'description' =>
+        'Overzicht van cursusprijzen, lidmaatschap en prijsinformatie.',
+],
+
+'information-safety' => [
+    'title' => 'Informatie - Veilig & vertrouwd',
+    'description' =>
+        'Informatie over gedragscode, vertrouwen, VOG en privacy.',
+],
+
+'assistance-intro' => [
+    'title' => 'Hulpverlening - Intro',
+    'description' =>
+        'Introductie over eerstehulpverlening bij evenementen.',
+],
+
+'assistance-types' => [
+    'title' => 'Hulpverlening - Type evenementen',
+    'description' =>
+        'Overzicht van soorten evenementen waarbij hulpverlening mogelijk is.',
+],
+
+'assistance-quality' => [
+    'title' => 'Hulpverlening - Kwaliteit',
+    'description' =>
+        'Informatie over training, kwaliteit en veiligheid bij evenementenzorg.',
+],
+
+'assistance-process' => [
+    'title' => 'Hulpverlening - Werkwijze',
+    'description' =>
+        'Stappenplan van aanvraag tot hulpverlening bij een evenement.',
+],
+
+'assistance-organiser' => [
+    'title' => 'Hulpverlening - Organisator',
+    'description' =>
+        'Praktische voorwaarden voor organisatoren van evenementen.',
+],
     ];
 
 

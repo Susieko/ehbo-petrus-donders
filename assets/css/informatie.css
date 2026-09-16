@@ -2245,3 +2245,497 @@
 
 }
 
+/* ========================================
+   GUTENBERG COMPATIBILITY
+======================================== */
+
+.information-locations__header
+> .wp-block-group__inner-container,
+
+.information-locations__grid
+> .wp-block-group__inner-container,
+
+.information-location
+> .wp-block-group__inner-container,
+
+.information-locations__note
+> .wp-block-group__inner-container {
+    display: contents;
+}
+
+
+/* Location Gutenberg blocks */
+
+.information-location__number,
+.information-location__label,
+.information-location__address,
+.information-location__time-label,
+.information-location__time-day,
+.information-location__time-hours,
+.information-locations__note-title,
+.information-locations__note-action {
+    margin-top: 0;
+}
+
+
+.information-location__number {
+    margin-bottom: 0;
+}
+
+
+.information-location__address {
+    margin-bottom: 0;
+
+    color: var(--color-text-soft);
+
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+
+.information-location__time-label {
+    margin:
+        0
+        0
+        5px;
+
+    color: var(--color-red);
+
+    font-size: 10px;
+    font-weight: 850;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+
+.information-location__time-day {
+    margin:
+        0
+        0
+        2px;
+
+    color: var(--color-blue-dark);
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+.information-location__time-hours {
+    margin: 0;
+
+    color: var(--color-text-soft);
+
+    font-size: 12px;
+}
+
+
+.information-locations__note-title {
+    margin: 0;
+
+    color: var(--color-blue-dark);
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.information-locations__note-action {
+    margin: 0;
+}
+
+/* Gutenberg lessons */
+
+.information-lessons__inner
+> .wp-block-group__inner-container,
+
+.information-checks
+> .wp-block-group__inner-container,
+
+.information-lessons__card
+> .wp-block-group__inner-container {
+    display: contents;
+}
+
+
+.information-lessons__body {
+    margin:
+        0
+        0
+        18px;
+
+    color: var(--color-text-soft);
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+.information-check {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    margin: 0;
+
+    color: var(--color-blue-dark);
+
+    font-size: 14px;
+    font-weight: 750;
+}
+
+
+.information-check::before {
+    content: "✓";
+
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+
+    width: 24px;
+    height: 24px;
+
+    background: var(--color-blue-light);
+    color: var(--color-blue);
+
+    border-radius: 50%;
+
+    font-size: 11px;
+    font-weight: 900;
+}
+
+
+.information-lessons__action {
+    margin: 0;
+}
+
+
+.information-lessons__card-label {
+    position: relative;
+    z-index: 2;
+
+    margin:
+        0
+        0
+        13px !important;
+
+    color: var(--color-yellow) !important;
+
+    font-size: 11px;
+    font-weight: 850;
+
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+
+.information-lessons__card-body {
+    position: relative;
+    z-index: 2;
+
+    margin:
+        0
+        0
+        28px !important;
+
+    color:
+        rgba(255, 255, 255, 0.72) !important;
+
+    line-height: 1.75;
+}
+
+
+.information-lessons__card-action {
+    position: relative;
+    z-index: 2;
+
+    margin: 0 !important;
+}
+
+/* Gutenberg recertification */
+
+.information-recertification
+> .wp-block-group__inner-container,
+
+.information-recertification__header
+> .wp-block-group__inner-container,
+
+.information-recertification__heading
+> .wp-block-group__inner-container,
+
+.information-recertification__validity
+> .wp-block-group__inner-container,
+
+.information-competencies
+> .wp-block-group__inner-container,
+
+.information-recertification__steps
+> .wp-block-group__inner-container,
+
+.information-recertification__step
+> .wp-block-group__inner-container {
+    display: contents;
+}
+
+
+/* Validity card */
+
+.information-recertification__validity {
+    padding:
+        20px
+        22px;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.1);
+
+    border-radius: 14px;
+}
+
+.information-recertification__years {
+    margin:
+        0
+        0
+        4px;
+
+    color: var(--color-yellow);
+
+    font-size:
+        clamp(30px, 3vw, 41px);
+
+    font-weight: 800;
+    line-height: 1;
+}
+
+.information-recertification__validity-text {
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.65);
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* Competency chips */
+
+.information-competency {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 35px;
+
+    margin: 0;
+
+    padding:
+        7px
+        13px;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    color:
+        rgba(255, 255, 255, 0.85);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.1);
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* Step cards */
+
+.recert-step__number {
+    margin:
+        0
+        0
+        31px;
+
+    color: var(--color-red);
+
+    font-size: 11px;
+    font-weight: 850;
+
+    letter-spacing: 0.09em;
+}
+
+.information-recertification__step h3 {
+    margin:
+        0
+        0
+        9px;
+
+    color: var(--color-blue-dark);
+
+    font-size: 19px;
+}
+
+.information-recertification__step
+> .wp-block-group__inner-container
+> p:not(.recert-step__number) {
+    margin: 0;
+
+    color: var(--color-text-soft);
+
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.information-recertification__action {
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0;
+}
+
+/* Gutenberg prices */
+
+.information-prices__header
+> .wp-block-group__inner-container,
+
+.information-price-table
+> .wp-block-group__inner-container,
+
+.information-price-row
+> .wp-block-group__inner-container,
+
+.information-prices__notes
+> .wp-block-group__inner-container,
+
+.information-price-note
+> .wp-block-group__inner-container {
+    display: contents;
+}
+
+
+/* Price rows */
+
+.information-price-name {
+    margin: 0;
+
+    color: var(--color-blue-dark);
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.information-price-value {
+    min-width: 130px;
+
+    margin: 0;
+
+    color: var(--color-blue);
+
+    font-size: 15px;
+    font-weight: 850;
+
+    text-align: right;
+}
+
+
+/* Price notes */
+
+.information-price-note {
+    padding:
+        24px
+        25px;
+
+    background: var(--color-blue-light);
+
+    border-radius: 15px;
+}
+
+.information-price-note__title {
+    margin:
+        0
+        0
+        7px;
+
+    color: var(--color-blue-dark);
+
+    font-size: 14px;
+}
+
+.information-price-note p {
+    margin: 0;
+
+    color: var(--color-text-soft);
+
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+
+@media (max-width: 520px) {
+
+    .information-price-value {
+        min-width: 0;
+
+        text-align: left;
+    }
+
+}
+
+/* Gutenberg safety */
+
+.information-safety__header
+> .wp-block-group__inner-container,
+
+.information-safety__grid
+> .wp-block-group__inner-container,
+
+.information-safety__card
+> .wp-block-group__inner-container {
+    display: contents;
+}
+
+
+/* Header intro */
+
+.information-safety__intro {
+    max-width: 550px;
+
+    margin: 0;
+
+    color: var(--color-text-soft);
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* Card number */
+
+.information-safety__card
+.information-safety__number {
+    display: block;
+
+    margin:
+        0
+        0
+        36px;
+
+    color: var(--color-red);
+
+    font-size: 11px;
+    font-weight: 850;
+
+    line-height: 1;
+
+    letter-spacing: 0.09em;
+}
