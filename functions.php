@@ -9,6 +9,10 @@ require_once get_theme_file_path(
 );
 
 require_once get_theme_file_path(
+    '/inc/editor.php'
+);
+
+require_once get_theme_file_path(
     '/inc/assets.php'
 );
 
