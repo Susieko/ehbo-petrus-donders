@@ -138,8 +138,10 @@
             <a
                 class="practical-card practical-card--yellow"
                 href="<?php echo esc_url(
-                    home_url('/stempelkaart-lesavonden/')
-                ); ?>"
+                                get_theme_file_uri(
+                                    '/assets/documents/data-lesavonden.pdf'
+                                )
+                            ); ?>"
             >
 
                 <div class="practical-card__icon" aria-hidden="true">

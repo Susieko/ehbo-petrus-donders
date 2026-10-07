@@ -142,4 +142,4 @@ jQuery(($) => {
 
         mediaFrame.open();
     });
-});
+}); 

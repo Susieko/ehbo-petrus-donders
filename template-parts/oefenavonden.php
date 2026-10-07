@@ -45,7 +45,7 @@
                     <a
                         class="text-link"
                         href="<?php echo esc_url(
-                            home_url('/stempelkaart-lesavonden/')
+                            home_url('/wp-content/uploads/2026/09/data-lesavonden.pdf')
                         ); ?>"
                     >
                         Bekijk het lesavondrooster

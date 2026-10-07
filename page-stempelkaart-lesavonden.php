@@ -10,6 +10,9 @@ $uploads = wp_upload_dir();
 $pdf_url =
     trailingslashit($uploads['baseurl']) .
     '2026/08/Uitleg-gebruik-stempel-presentatiekaart.pdf';
+
+$lesrooster_url = '/wp-content/uploads/2026/09/data-lesavonden.pdf';
+    
 ?>
 
 <main id="main-content">
@@ -26,24 +29,39 @@ $pdf_url =
 
                 <h1>Presentiekaart voor lesavonden</h1>
 
-                <p>
-                    Met de presentiekaart – ook wel stempelkaart genoemd –
-                    houdt je eenvoudig bij welke lessen en competenties je
-                    hebt gevolgd voor jouw hercertificering.
-                </p>
+<p>
+    Met de presentiekaart – ook wel stempelkaart genoemd –
+    houd je eenvoudig bij welke lessen en competenties je
+    hebt gevolgd voor jouw hercertificering.
 
-                <a
-                    class="stamp-card-hero__button"
-                    href="<?php echo esc_url($pdf_url); ?>"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Bekijk de volledige uitleg
-                    <span aria-hidden="true">↗</span>
-                </a>
+    Bekijk het lesrooster om te zien welke lessen je nog
+    kunt volgen.
+</p>
 
-            </div>
+<div class="stamp-card-hero__actions">
 
+    <a
+        class="stamp-card-hero__button"
+        href="<?php echo esc_url($pdf_url); ?>"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Bekijk de volledige uitleg
+        <span aria-hidden="true">↗</span>
+    </a>
+
+    <a
+        class="stamp-card-hero__button stamp-card-hero__button--outline"
+        href="<?php echo esc_url($lesrooster_url); ?>"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Bekijk lesrooster (PDF)
+        <span aria-hidden="true">↗</span>
+    </a>
+
+</div>
+</div>
 
             <div class="stamp-card-hero__visual reveal" aria-hidden="true">
 

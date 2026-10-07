@@ -187,10 +187,10 @@
                     <li>
 
                         <a href="<?php echo esc_url(
-                            home_url(
-                                '/informatie/#oefenavonden'
-                            )
-                        ); ?>">
+                                get_theme_file_uri(
+                                    '/assets/documents/data-lesavonden.pdf'
+                                )
+                            ); ?>">
 
                             Rooster lesavonden
 
