@@ -67,7 +67,7 @@
                 <img
                     src="<?php echo esc_url(
                         get_template_directory_uri() .
-                        '/assets/images/gallery-jubilaris.jpg'
+                        '/assets/images/ehbo-historie-1934.jpg'
                     ); ?>"
                     alt="Een jubilaris van Petrus Donders ontvangt bloemen"
                     loading="lazy"

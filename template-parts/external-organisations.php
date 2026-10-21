@@ -110,38 +110,22 @@ $ehbo_organisations = [
 
                 <?php foreach ($ehbo_organisations as $organisation) : ?>
 
-                    <a
-                        class="organisation-loop__item"
-                        href="<?php echo esc_url($organisation['url']); ?>"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="<?php echo esc_attr(
-                            $organisation['name']
-                            . ' – opent in een nieuw tabblad'
-                        ); ?>"
-                    >
+    <div class="organisation-loop__item">
 
-                        <img
-                            src="<?php echo esc_url(
-                                $logo_directory
-                                . $organisation['logo']
-                            ); ?>"
-                            alt="<?php echo esc_attr(
-                                $organisation['name']
-                            ); ?>"
-                            loading="lazy"
-                        >
+        <img
+            src="<?php echo esc_url(
+                $logo_directory
+                . $organisation['logo']
+            ); ?>"
+            alt="<?php echo esc_attr(
+                $organisation['name']
+            ); ?>"
+            loading="lazy"
+        >
 
-                        <span
-                            class="organisation-loop__arrow"
-                            aria-hidden="true"
-                        >
-                            ↗
-                        </span>
+    </div>
 
-                    </a>
-
-                <?php endforeach; ?>
+<?php endforeach; ?>
 
             </div>
 
@@ -153,33 +137,23 @@ $ehbo_organisations = [
 
                 <?php foreach ($ehbo_organisations as $organisation) : ?>
 
-                    <a
-                        class="organisation-loop__item"
-                        href="<?php echo esc_url($organisation['url']); ?>"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        tabindex="-1"
-                    >
+    <div
+        class="organisation-loop__item"
+        aria-hidden="true"
+    >
 
-                        <img
-                            src="<?php echo esc_url(
-                                $logo_directory
-                                . $organisation['logo']
-                            ); ?>"
-                            alt=""
-                            loading="lazy"
-                        >
+        <img
+            src="<?php echo esc_url(
+                $logo_directory
+                . $organisation['logo']
+            ); ?>"
+            alt=""
+            loading="lazy"
+        >
 
-                        <span
-                            class="organisation-loop__arrow"
-                            aria-hidden="true"
-                        >
-                            ↗
-                        </span>
+    </div>
 
-                    </a>
-
-                <?php endforeach; ?>
+<?php endforeach; ?>
 
             </div>
 

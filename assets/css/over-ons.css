@@ -2491,3 +2491,46 @@
     }
 
 }
+
+.about-history__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+    background: #f3f5f7;
+}
+
+/* Historical photo caption */
+.about-history__photo-caption {
+    margin: 30px 0;
+    padding: 18px 22px;
+
+    background: rgba(8, 47, 99, 0.04);
+    border-left: 3px solid var(--color-blue-dark);
+    border-radius: 0 8px 8px 0;
+}
+
+.about-history__photo-label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: var(--color-blue-dark);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.about-history__photo-caption p {
+    margin: 0 0 6px;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.about-history__photo-caption small {
+    color: var(--color-text-soft);
+    font-size: 12px;
+    line-height: 1.5;
+}

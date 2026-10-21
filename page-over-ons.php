@@ -448,7 +448,7 @@ get_header();
                     <img
                         src="<?php echo esc_url(
                             get_stylesheet_directory_uri() .
-                            '/assets/images/gallery-jubilaris.jpg'
+                            '/assets/images/ehbo-historie-1934.jpg'
                         ); ?>"
                         alt="Leden en jubilarissen van Petrus Donders"
                         loading="lazy"
@@ -506,6 +506,23 @@ get_header();
                     Zo combineren we een lange verenigingstraditie
                     met moderne eerstehulpverlening.
                 </p>
+
+                <div class="about-history__photo-caption">
+    <span class="about-history__photo-label">
+        Historisch beeld · 1934
+    </span>
+
+    <p>
+        Viering van het 5-jarig bestaan van
+        EHBO-vereniging Petrus Donders op
+        11 maart 1934.
+    </p>
+
+    <small>
+        Fotograaf onbekend ·
+        Collectie Regionaal Archief Tilburg
+    </small>
+</div>
 
 
                 <div class="about-history__line">
