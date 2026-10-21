@@ -144,6 +144,9 @@ get_header();
                     <a href="#sportletsels">
                         Sportletsels
                     </a>
+                    <a href="#workshops-in-company">
+                        Workshops / In Company
+                    </a>
 
                 </nav>
 
@@ -1111,14 +1114,14 @@ get_header();
          IN COMPANY
     ========================================= -->
 
-    <section class="courses-company page-section">
+    <section class="courses-company page-section" id="workshops-in-company">
 
         <div class="container courses-company__inner">
 
             <div class="courses-company__content reveal">
 
                 <span class="section-eyebrow">
-                    Voor organisaties
+                    Workshops of In Company Eerste Hulp Opleidingen
                 </span>
 
                 <h2>
