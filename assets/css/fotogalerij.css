@@ -1091,3 +1091,30 @@
     }
 
 }
+
+
+/* Keep all six photos in a balanced featured grid when the gallery
+   has exactly six images (avoids an orphan photo wall). */
+@media (min-width: 1101px) {
+    .gallery-featured__grid--six {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: repeat(2, 300px);
+    }
+
+    .gallery-featured__grid--six .gallery-featured-card {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1100px) {
+    .gallery-featured__grid--six {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(3, 300px);
+    }
+
+    .gallery-featured__grid--six .gallery-featured-card {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
