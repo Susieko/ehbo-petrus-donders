@@ -18,15 +18,19 @@ $hero_images = array_slice(
     3
 );
 
+// Keep a six-photo gallery together instead of leaving one photo alone
+// in a separate photo-wall section.
+$featured_count = $total_images === 6 ? 6 : min(5, $total_images);
+
 $featured_images = array_slice(
     $gallery_images,
     0,
-    min(5, $total_images)
+    $featured_count
 );
 
 $wall_images = array_slice(
     $gallery_images,
-    min(5, $total_images)
+    $featured_count
 );
 ?>
 
@@ -265,7 +269,7 @@ $wall_images = array_slice(
 
             <?php if ($featured_images) : ?>
 
-                <div class="gallery-featured__grid reveal-stagger">
+                <div class="gallery-featured__grid reveal-stagger<?php echo $featured_count === 6 ? ' gallery-featured__grid--six' : ''; ?>">
 
                     <?php foreach (
                         $featured_images as $index => $image
