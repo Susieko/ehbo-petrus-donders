@@ -945,6 +945,111 @@ href="<?php echo esc_url(
 
 
 
+    <?php
+// Contactgegevens gereconstrueerd uit de clientbriefing van 15 oktober 2026.
+// Bevestig functies en contactgegevens met de vereniging vóór livegang.
+$ehbo_contact_people = [
+  {
+    'role': 'Voorzitter',
+    'name': 'Vacant',
+    'phone': '',
+    'emails': [
+      'voorzitter@petrusdonders.nl'
+    ]
+  },
+  {
+    'role': 'Secretaris & opleidingenadministratie',
+    'name': 'C. A. M. Vorselaars',
+    'phone': '06 - 46016737',
+    'emails': [
+      'info@petrusdonders.nl',
+      'opleidingen@petrusdonders.nl'
+    ]
+  },
+  {
+    'role': 'Penningmeester',
+    'name': 'J. v/d Horst',
+    'phone': '06 - 51538374',
+    'emails': [
+      'penningmeester@petrusdonders.nl'
+    ]
+  },
+  {
+    'role': 'Algemeen bestuurslid',
+    'name': 'T. Kogels',
+    'phone': '013 - 5133355',
+    'emails': [
+      't.kogels@petrusdonders.nl'
+    ]
+  },
+  {
+    'role': 'Algemeen bestuurslid',
+    'name': 'Mw. A. van Engelen',
+    'phone': '06 - 25310188',
+    'emails': [
+      'annievandersteen@petrusdonders.nl'
+    ]
+  },
+  {
+    'role': 'Algemeen bestuurslid & materiaalbeheerder',
+    'name': 'P. Lurings',
+    'phone': '06 - 29423523',
+    'emails': [
+      'p.lurings@petrusdonders.nl'
+    ]
+  },
+  {
+    'role': 'Algemeen bestuurslid & coördinatrice evenementenzorg',
+    'name': 'Mw. A. v/d Made',
+    'phone': '06 - 57881006',
+    'emails': [
+      'avdmade@petrusdonders.nl',
+      'hulpverlening@petrusdonders.nl'
+    ]
+  },
+  {
+    'role': 'Vertrouwenscontactpersoon',
+    'name': 'Chantal Koster-van Gils',
+    'phone': '',
+    'emails': [
+      'chantal.koster@petrusdonders.nl'
+    ]
+  }
+];
+?>
+<section class="ehbo-contact-people page-section" id="contactpersonen" aria-labelledby="contactpersonen-title">
+    <div class="container">
+        <div class="ehbo-contact-people__heading reveal">
+            <span class="section-eyebrow">De mensen achter de vereniging</span>
+            <h2 id="contactpersonen-title">Bestuur &amp; contactpersonen.</h2>
+            <p>Op zoek naar iemand binnen de vereniging? Hieronder vind je onze contactpersonen en hun gegevens.</p>
+        </div>
+        <div class="ehbo-contact-people__grid reveal-stagger">
+            <?php foreach ($ehbo_contact_people as $person) : ?>
+                <article class="ehbo-contact-people__card">
+                    <span class="ehbo-contact-people__role"><?php echo esc_html($person['role']); ?></span>
+                    <h3><?php echo esc_html($person['name']); ?></h3>
+                    <div class="ehbo-contact-people__methods">
+                        <?php if (!empty($person['phone'])) : ?>
+                            <?php $tel = preg_replace('/[^0-9+]/', '', $person['phone']); ?>
+                            <a href="<?php echo esc_url('tel:' . $tel); ?>">
+                                <span class="ehbo-contact-people__method-label">Telefoon</span>
+                                <span><?php echo esc_html($person['phone']); ?></span>
+                            </a>
+                        <?php endif; ?>
+                        <?php foreach ($person['emails'] as $email) : ?>
+                            <a href="<?php echo esc_url('mailto:' . $email); ?>">
+                                <span class="ehbo-contact-people__method-label">E-mail</span>
+                                <span><?php echo esc_html($email); ?></span>
+                            </a>
+                        <?php endforeach; ?>
+                    </div>
+                </article>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+
     <!-- ========================================
          FINAL CTA
     ========================================= -->
