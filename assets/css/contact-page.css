@@ -1336,3 +1336,18 @@
     }
 
 }
+
+/* Bestuur & contactpersonen — toegevoegd oktober 2026 */
+.ehbo-contact-people { background:var(--color-off-white); }
+.ehbo-contact-people__heading { max-width:760px; margin-bottom:clamp(35px,5vw,60px); }
+.ehbo-contact-people__heading h2 { margin:0 0 20px; color:var(--color-blue-dark); font-size:clamp(36px,4.3vw,60px); line-height:1.07; letter-spacing:-.045em; }
+.ehbo-contact-people__heading p { max-width:630px; margin:0; color:var(--color-text-soft); font-size:16px; line-height:1.8; }
+.ehbo-contact-people__grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+.ehbo-contact-people__card { min-width:0; padding:clamp(26px,3vw,38px); background:var(--color-white); border:1px solid var(--color-border); border-radius:19px 19px 6px 19px; }
+.ehbo-contact-people__role { display:block; margin-bottom:13px; color:var(--color-red); font-size:11px; font-weight:850; letter-spacing:.075em; text-transform:uppercase; }
+.ehbo-contact-people__card h3 { margin:0 0 25px; color:var(--color-blue-dark); font-size:clamp(23px,2.4vw,29px); line-height:1.2; }
+.ehbo-contact-people__methods { display:flex; flex-wrap:wrap; gap:16px 28px; }
+.ehbo-contact-people__methods a { display:flex; flex-direction:column; gap:5px; min-width:0; overflow-wrap:anywhere; color:var(--color-blue); font-size:14px; font-weight:700; line-height:1.5; text-decoration:none; }
+.ehbo-contact-people__method-label { color:var(--color-text-soft); font-size:11px; font-weight:700; }
+.ehbo-contact-people__methods a:hover, .ehbo-contact-people__methods a:focus-visible { color:var(--color-blue-dark); text-decoration:underline; text-underline-offset:3px; }
+@media (max-width:760px) { .ehbo-contact-people__grid { grid-template-columns:minmax(0,1fr); gap:15px; } .ehbo-contact-people__card { padding:26px; } }
