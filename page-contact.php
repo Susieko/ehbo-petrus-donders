@@ -946,75 +946,17 @@ href="<?php echo esc_url(
 
 
     <?php
-// Contactgegevens gereconstrueerd uit de clientbriefing van 15 oktober 2026.
-// Bevestig functies en contactgegevens met de vereniging vóór livegang.
+// Gereconstrueerd uit clientbriefing 15 oktober 2026.
+// Controleer functies en contactgegevens bij de vereniging voordat dit live gaat.
 $ehbo_contact_people = [
-  {
-    'role': 'Voorzitter',
-    'name': 'Vacant',
-    'phone': '',
-    'emails': [
-      'voorzitter@petrusdonders.nl'
-    ]
-  },
-  {
-    'role': 'Secretaris & opleidingenadministratie',
-    'name': 'C. A. M. Vorselaars',
-    'phone': '06 - 46016737',
-    'emails': [
-      'info@petrusdonders.nl',
-      'opleidingen@petrusdonders.nl'
-    ]
-  },
-  {
-    'role': 'Penningmeester',
-    'name': 'J. v/d Horst',
-    'phone': '06 - 51538374',
-    'emails': [
-      'penningmeester@petrusdonders.nl'
-    ]
-  },
-  {
-    'role': 'Algemeen bestuurslid',
-    'name': 'T. Kogels',
-    'phone': '013 - 5133355',
-    'emails': [
-      't.kogels@petrusdonders.nl'
-    ]
-  },
-  {
-    'role': 'Algemeen bestuurslid',
-    'name': 'Mw. A. van Engelen',
-    'phone': '06 - 25310188',
-    'emails': [
-      'annievandersteen@petrusdonders.nl'
-    ]
-  },
-  {
-    'role': 'Algemeen bestuurslid & materiaalbeheerder',
-    'name': 'P. Lurings',
-    'phone': '06 - 29423523',
-    'emails': [
-      'p.lurings@petrusdonders.nl'
-    ]
-  },
-  {
-    'role': 'Algemeen bestuurslid & coördinatrice evenementenzorg',
-    'name': 'Mw. A. v/d Made',
-    'phone': '06 - 57881006',
-    'emails': [
-      'avdmade@petrusdonders.nl',
-      'hulpverlening@petrusdonders.nl'
-    ]
-  },
-  {
-    'role': 'Vertrouwenscontactpersoon',
-    'name': 'Chantal Koster-van Gils',
-    'phone': '',
-    'emails': [
-      'chantal.koster@petrusdonders.nl'
-    ]
-  }
+    ['role' => 'Voorzitter', 'name' => 'Vacant', 'phone' => '', 'emails' => ['voorzitter@petrusdonders.nl']],
+    ['role' => 'Secretaris & opleidingenadministratie', 'name' => 'C. A. M. Vorselaars', 'phone' => '06 - 46016737', 'emails' => ['info@petrusdonders.nl', 'opleidingen@petrusdonders.nl']],
+    ['role' => 'Penningmeester', 'name' => 'J. v/d Horst', 'phone' => '06 - 51538374', 'emails' => ['penningmeester@petrusdonders.nl']],
+    ['role' => 'Algemeen bestuurslid', 'name' => 'T. Kogels', 'phone' => '013 - 5133355', 'emails' => ['t.kogels@petrusdonders.nl']],
+    ['role' => 'Algemeen bestuurslid', 'name' => 'Mw. A. van Engelen', 'phone' => '06 - 25310188', 'emails' => ['annievandersteen@petrusdonders.nl']],
+    ['role' => 'Algemeen bestuurslid & materiaalbeheerder', 'name' => 'P. Lurings', 'phone' => '06 - 29423523', 'emails' => ['p.lurings@petrusdonders.nl']],
+    ['role' => 'Algemeen bestuurslid & coördinatrice evenementenzorg', 'name' => 'Mw. A. v/d Made', 'phone' => '06 - 57881006', 'emails' => ['avdmade@petrusdonders.nl', 'hulpverlening@petrusdonders.nl']],
+    ['role' => 'Vertrouwenscontactpersoon', 'name' => 'Chantal Koster-van Gils', 'phone' => '', 'emails' => ['chantal.koster@petrusdonders.nl']],
 ];
 ?>
 <section class="ehbo-contact-people page-section" id="contactpersonen" aria-labelledby="contactpersonen-title">
