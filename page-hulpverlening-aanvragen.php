@@ -249,9 +249,9 @@ $form_status = isset($_GET['hulpverlening_status'])
 
                 <a
                     class="page-text-link"
-                    href="<?php echo esc_url(
-                        home_url('/hulpverlening/')
-                    ); ?>"
+                    href="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/documents/voorwaarden-hulpverlening-petrus-donders-2026-10.pdf'); ?>"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
                     Voorwaarden bekijken
                     <span aria-hidden="true">→</span>
