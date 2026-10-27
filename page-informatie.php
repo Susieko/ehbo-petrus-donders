@@ -1162,7 +1162,45 @@ get_header();
 
             <a
                 class="information-resource"
-                href="https://www.petrusdonders.nl/Privacy%20Reglement%20EHBO-ver.%20Petrus%20Donders_W18.04.2019.pdf"
+                href="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/documents/gedragscode-petrus-donders-2026-10.pdf'); ?>"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <div class="information-resource__top">
+
+                    <span class="information-resource__type">
+                        PDF
+                    </span>
+
+                    <span
+                        class="information-resource__arrow"
+                        aria-hidden="true"
+                    >
+                        ↗
+                    </span>
+
+                </div>
+
+                <h3>
+                    Gedragscode
+                </h3>
+
+                <p>
+                    Afspraken voor een respectvolle,
+                    veilige vereniging en het melden van ongewenst gedrag.
+                </p>
+
+                <span class="information-resource__meta">
+                    Veiligheid & respect
+                </span>
+
+            </a>
+
+
+            <a
+                class="information-resource"
+                href="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/documents/privacyreglement-petrus-donders-2026-10.pdf'); ?>"
                 target="_blank"
                 rel="noopener noreferrer"
             >
@@ -1200,7 +1238,7 @@ get_header();
 
             <a
                 class="information-resource"
-                href="https://www.petrusdonders.nl/algemene%20voorwaarden%20hulpverlening%20PD_v20-02-23.pdf"
+                href="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/documents/voorwaarden-hulpverlening-petrus-donders-2026-10.pdf'); ?>"
                 target="_blank"
                 rel="noopener noreferrer"
             >
