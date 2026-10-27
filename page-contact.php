@@ -956,7 +956,7 @@ $ehbo_contact_people = [
     ['role' => 'Algemeen bestuurslid', 'name' => 'Mw. A. van Engelen', 'phone' => '06 - 25310188', 'emails' => ['annievandersteen@petrusdonders.nl']],
     ['role' => 'Algemeen bestuurslid & materiaalbeheerder', 'name' => 'P. Lurings', 'phone' => '06 - 29423523', 'emails' => ['p.lurings@petrusdonders.nl']],
     ['role' => 'Algemeen bestuurslid & coördinatrice evenementenzorg', 'name' => 'Mw. A. v/d Made', 'phone' => '06 - 57881006', 'emails' => ['avdmade@petrusdonders.nl', 'hulpverlening@petrusdonders.nl']],
-    ['role' => 'Vertrouwenscontactpersoon', 'name' => 'Chantal Koster-van Gils', 'phone' => '', 'emails' => ['chantal.koster@petrusdonders.nl']],
+    ['role' => 'Vertrouwenscontactpersoon', 'name' => 'Chantal Koster-van Gils', 'phone' => '06 - 13223414', 'emails' => ['chantal.koster@petrusdonders.nl']],
 ];
 ?>
 <section class="ehbo-contact-people page-section" id="contactpersonen" aria-labelledby="contactpersonen-title">
