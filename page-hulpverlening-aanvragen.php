@@ -1231,14 +1231,14 @@ $form_status = isset($_GET['hulpverlening_status'])
 
                         <p class="event-form-conditions-link">
 
-                            Bekijk voor verzending ook onze
+                            Lees voor verzending ook de
 
                             <a
-                                href="<?php echo esc_url(
-                                    home_url('/hulpverlening/')
-                                ); ?>"
+                                href="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/documents/voorwaarden-hulpverlening-petrus-donders-2026-10.pdf'); ?>"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
-                                informatie over hulpverlening
+                                algemene voorwaarden voor hulpverlening (PDF)
                             </a>.
 
                         </p>
